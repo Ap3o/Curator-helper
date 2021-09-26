@@ -7,3 +7,7 @@ def index(request):
 
 def dashboard(request):
     return render(request, "dashboard.html")
+
+
+def datatables(request):
+    return render(request, "data.html")

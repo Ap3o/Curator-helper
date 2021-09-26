@@ -5,9 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    {% block title %}
 
-    <title>AdminLTE 3 | Dashboard 2</title>
-
+    {% endblock %}
+    {% block head %}
+    {% endblock %}
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
     <!-- overlayScrollbars -->
@@ -145,7 +147,8 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
-            <img src="{% static 'staticdist/img/AdminLTELogo.png' %}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+            <img src="{% static 'staticdist/img/AdminLTELogo.png' %}" alt="AdminLTE Logo"
+                 class="brand-image img-circle elevation-3"
                  style="opacity: .8">
             <span class="brand-text font-weight-light">AdminLTE 3</span>
         </a>
@@ -388,7 +391,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/tables/data.html" class="nav-link">
+                                <a href="{% url 'tables' %}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>DataTables</p>
                                 </a>
@@ -715,16 +718,9 @@
 <!-- OPTIONAL SCRIPTS -->
 <script src="{% static 'staticdist/js/demo.js' %}"></script>
 
-<!-- PAGE PLUGINS -->
-<!-- jQuery Mapael -->
-<script src="{% static 'plugins/jquery-mousewheel/jquery.mousewheel.js' %}"></script>
-<script src="{% static 'plugins/raphael/raphael.min.js' %}"></script>
-<script src="{% static 'plugins/jquery-mapael/jquery.mapael.min.js' %}"></script>
-<script src="{% static 'plugins/jquery-mapael/maps/usa_states.min.js' %}"></script>
-<!-- ChartJS -->
-<script src="{% static 'plugins/chart.js/Chart.min.js' %}"></script>
 
-<!-- PAGE SCRIPTS -->
-<script src="{% static 'staticdist/js/pages/dashboard2.js' %}"></script>
+
+{% block scripts %}
+{% endblock %}
 </body>
 </html>

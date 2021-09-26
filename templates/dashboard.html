@@ -1,4 +1,8 @@
 {% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}
+    <title>C-H | Dashboard</title>
+{% endblock %}
 {% block content %}
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -884,4 +888,16 @@
             <!-- /.row -->
         </div><!--/. container-fluid -->
     </section>
+{% endblock %}
+{% block scripts %}
+    <!-- PAGE PLUGINS -->
+    <!-- jQuery Mapael -->
+    <script src="{% static 'plugins/jquery-mousewheel/jquery.mousewheel.js' %}"></script>
+    <script src="{% static 'plugins/raphael/raphael.min.js' %}"></script>
+    <script src="{% static 'plugins/jquery-mapael/jquery.mapael.min.js' %}"></script>
+    <script src="{% static 'plugins/jquery-mapael/maps/usa_states.min.js' %}"></script>
+    <!-- ChartJS -->
+    <script src="{% static 'plugins/chart.js/Chart.min.js' %}"></script>
+    <!-- PAGE SCRIPTS -->
+    <script src="{% static 'staticdist/js/pages/dashboard2.js' %}"></script>
 {% endblock %}
