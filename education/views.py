@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from .models import AcademicPerformance
 
 
 def index(request):
@@ -10,4 +11,5 @@ def dashboard(request):
 
 
 def datatables(request):
-    return render(request, "data.html")
+    academicperfomance = AcademicPerformance.objects.all()
+    return render(request, "data.html", {"content": academicperfomance})
