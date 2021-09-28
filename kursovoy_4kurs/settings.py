@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     # ---------------------------
     'education',
     'services',
+    'api'
 ]
 
 MIDDLEWARE = [
