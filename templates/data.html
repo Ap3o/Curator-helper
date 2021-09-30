@@ -150,7 +150,7 @@
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                    <button type="button" class="btn btn-success">Сохранить</button>
+                    <button type="button" class="btn btn-success save">Сохранить</button>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -185,6 +185,7 @@
 
     </script>
     <script>
+        let ap_id = 0;
         $(function () {
             //Initialize Select2 Elements
             $('.select2bs4').select2({
@@ -195,7 +196,7 @@
             // Set up the Select2 control
             $('#select_name').select2({
                 ajax: {
-                    url: '/api/students/',
+                    url: '{% url 'get_students' %}',
                     dataType: 'json',
                 }
             });
@@ -203,7 +204,7 @@
             // Set up the Select2 control
             $('#select_subject').select2({
                 ajax: {
-                    url: '/api/subjects/',
+                    url: '{% url 'get_subjects_link' %}',
                     dataType: 'json',
                 }
             });
@@ -211,7 +212,7 @@
             // Set up the Select2 control
             $('#select_teacher').select2({
                 ajax: {
-                    url: '/api/teachers/',
+                    url: '{% url 'get_teachers_link' %}',
                     dataType: 'json',
                 }
             });
@@ -222,29 +223,34 @@
             // Set up the Select2 control
             $('#select_mark').select2();
 
-
+            $(document).on('click', '.btn-success.save', function () {
+                $.ajax({
+                    type: 'POST',
+                    url: '{}',
+                })
+            });
             $(document).on('click', '.btn-primary.edit', function () {
                 $('#modal-lg').modal("show")
 
                 // Fetch the preselected item, and add to the control
-                {# TODO Сделать так, чтобы по AcademicPerfomance ID Передавалась вся нужная инфа для заполнения во все СЕЛЕКТЫ!!!#}
                 var studentSelect = $('#select_name');
                 var subjectSelect = $('#select_subject');
                 var teacherSelect = $('#select_teacher');
                 var typeSelect = $('#select_type');
                 var markSelect = $('#select_mark');
+                ap_id = this.id;
                 $.ajax({
                     type: 'GET',
                     url: '{% url 'get_academicperfomance_link' %}' + '?term=' + this.id
                 }).then(function (data) {
                         // create the option and append to Select2
-                        var optionStudent = new Option(data.student_name, data.student_id, true, true);
+                        var optionStudent = new Option(data.student_name, 1, true, true);
                         studentSelect.append(optionStudent).trigger('change');
 
-                        var optionTeacher = new Option(data.teacher_name, data.teacher_id, true, true);
+                        var optionTeacher = new Option(data.teacher_name, 1, true, true);
                         teacherSelect.append(optionTeacher).trigger('change');
 
-                        var optionSubject = new Option(data.subject_name, data.subject_id, true, true);
+                        var optionSubject = new Option(data.subject_name, 1, true, true);
                         subjectSelect.append(optionSubject).trigger('change');
 
                         var optionsPerfomance = new Option(data.type, 1, true, true);
@@ -252,15 +258,6 @@
 
                         var optionsMark = new Option(data.mark, 1, true, true);
                         markSelect.append(optionsMark).trigger('change');
-
-
-                        // manually trigger the `select2:select` event
-                        studentSelect.trigger({
-                            type: 'select2:select',
-                            params: {
-                                data: data
-                            }
-                        });
                     }
                 )
             })

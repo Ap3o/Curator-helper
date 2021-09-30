@@ -29,11 +29,9 @@ def get_teachers(request):
 
 def get_academicperfomance(request):
     academperfomance = AcademicPerformance.objects.get(id=request.GET.get('term', ''))
-    return JsonResponse({'student_id': academperfomance.student.id,
+    return JsonResponse({
                          'student_name': academperfomance.student.full_name,
-                         'teacher_id': academperfomance.teacher.id,
                          'teacher_name': academperfomance.teacher.full_name,
-                         'subject_id': academperfomance.subject.id,
                          'subject_name': academperfomance.subject.name,
                          'type': academperfomance.type_of_perfomance,
                          'mark': academperfomance.mark
