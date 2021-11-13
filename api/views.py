@@ -27,12 +27,12 @@ def get_teachers(request):
     return JsonResponse({'results': teachers_array})
 
 
-def get_academicperfomance(request):
-    academperfomance = AcademicPerformance.objects.get(id=request.GET.get('term', ''))
+def get_academic_performance(request):
+    academic_performance = AcademicPerformance.objects.get(id=request.GET.get('term', ''))
     return JsonResponse({
-                         'student_name': academperfomance.student.full_name,
-                         'teacher_name': academperfomance.teacher.full_name,
-                         'subject_name': academperfomance.subject.name,
-                         'type': academperfomance.type_of_perfomance,
-                         'mark': academperfomance.mark
+                         'student_name': academic_performance.student.full_name,
+                         'teacher_name': academic_performance.teacher.full_name,
+                         'subject_name': academic_performance.subject.name,
+                         'type': academic_performance.type_of_perfomance,
+                         'mark': academic_performance.mark
                          })
