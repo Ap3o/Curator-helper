@@ -30,9 +30,17 @@ def get_teachers(request):
 def get_academic_performance(request):
     academic_performance = AcademicPerformance.objects.get(id=request.GET.get('term', ''))
     return JsonResponse({
-                         'student_name': academic_performance.student.full_name,
-                         'teacher_name': academic_performance.teacher.full_name,
-                         'subject_name': academic_performance.subject.name,
-                         'type': academic_performance.type_of_perfomance,
-                         'mark': academic_performance.mark
-                         })
+        'student_name': academic_performance.student.full_name,
+        'teacher_name': academic_performance.teacher.full_name,
+        'subject_name': academic_performance.subject.name,
+        'type': academic_performance.type_of_perfomance,
+        'mark': academic_performance.mark
+    })
+
+
+def save_academic_performance(request):
+    academic_performance = AcademicPerformance.objects.get(id=request.GET.get('term', ''))
+    # TODO Если айдишника нет, значит создаем новый academic performance с указанными данными.
+    return JsonResponse({
+        'results': 'ok'
+    })

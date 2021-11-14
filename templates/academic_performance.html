@@ -102,24 +102,31 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label>id</label>
+                                <label for="select_id"></label><select
+                                    class="form-control select2 select2-hidden-accessible" style="width: 100%;"
+                                    data-select2-id="17" tabindex="-1" aria-hidden="true" id="select_id" disabled>
+                            </select>
+                            </div>
+                            <div class="form-group">
                                 <label>ФИО Студента</label>
                                 <label for="select_name"></label><select
                                     class="form-control select2 select2-hidden-accessible" style="width: 100%;"
-                                    data-select2-id="12" tabindex="-1" aria-hidden="true" id="select_name">
+                                    data-select2-id="12" tabindex="-1" aria-hidden="true" id="select_name" disabled>
                             </select>
                             </div>
                             <div class="form-group">
                                 <label>Дисциплина</label>
                                 <label for="select_subject"></label><select
                                     class="form-control select2 select2-hidden-accessible" style="width: 100%;"
-                                    data-select2-id="13" tabindex="-1" aria-hidden="true" id="select_subject">
+                                    data-select2-id="13" tabindex="-1" aria-hidden="true" id="select_subject" disabled>
                             </select>
                             </div>
                             <div class="form-group">
                                 <label>Преподаватель</label>
                                 <label for="select_teacher"></label><select
                                     class="form-control select2 select2-hidden-accessible" style="width: 100%;"
-                                    data-select2-id="14" tabindex="-1" aria-hidden="true" id="select_teacher">
+                                    data-select2-id="14" tabindex="-1" aria-hidden="true" id="select_teacher" disabled>
                             </select>
                             </div>
                             <div class="form-group">
@@ -223,16 +230,26 @@
             // Set up the Select2 control
             $('#select_mark').select2();
 
+            $('#select_id').select2();
+
             $(document).on('click', '.btn-success.save', function () {
+                var idSelect = $('#select_id');
+                var studentSelect = $('#select_name');
+                var subjectSelect = $('#select_subject');
+                var teacherSelect = $('#select_teacher');
+                var typeSelect = $('#select_type');
+                var markSelect = $('#select_mark');
                 $.ajax({
-                    type: 'POST',
-                    url: '{}',
+                    type: 'GET',
+                    url: '{% url 'save_academic_performance' %}' + '?term=' + idSelect[0].innerText,
                 })
             });
+
             $(document).on('click', '.btn-primary.edit', function () {
                 $('#modal-lg').modal("show")
 
                 // Fetch the preselected item, and add to the control
+                var idSelect = $('#select_id');
                 var studentSelect = $('#select_name');
                 var subjectSelect = $('#select_subject');
                 var teacherSelect = $('#select_teacher');
@@ -244,6 +261,9 @@
                     url: '{% url 'get_academic_performance' %}' + '?term=' + this.id
                 }).then(function (data) {
                         // create the option and append to Select2
+                        var optionId = new Option(ap_id, 1, true, true);
+                        idSelect.append(optionId).trigger('change');
+
                         var optionStudent = new Option(data.student_name, 1, true, true);
                         studentSelect.append(optionStudent).trigger('change');
 

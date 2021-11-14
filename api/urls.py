@@ -7,5 +7,6 @@ urlpatterns = [
     url('^subjects/$', views.get_subjects, name="get_subjects_link"),
     url('^teachers/$', views.get_teachers, name="get_teachers_link"),
     url('^acperf/$', views.get_academic_performance, name="get_academic_performance"),
+    url('^save_acperf/$', views.save_academic_performance, name="save_academic_performance"),
     # url('^subjects/$', views.get_subjects, name="get_subjects_link"),
 ]
