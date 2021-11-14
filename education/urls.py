@@ -5,6 +5,4 @@ urlpatterns = [
     url('^$', views.index, name="wrapper"),
     url('^dashboard/$', views.dashboard, name="dashboard"),
     url('^datatables/$', views.datatables, name="tables"),
-    url('^academicperformance/create/$', views.test,
-        name="AcademicPerformance-create")
 ]
