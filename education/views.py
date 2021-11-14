@@ -12,4 +12,4 @@ def dashboard(request):
 
 def datatables(request):
     academicperfomance = AcademicPerformance.objects.all()
-    return render(request, "data.html", {"content": academicperfomance})
+    return render(request, "academic_performance.html", {"content": academicperfomance})
