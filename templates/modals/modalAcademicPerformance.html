@@ -1,9 +1,5 @@
 {#Если initial_id = '', то создаем новую запись. иначе редактируем#}
-{% if initial_id != '' %}
-    <form action="{% url 'edit_academic_performance' initial_id %}" method="POST">
-{% else %}
-    <form action="{% url 'create_academic_performance' %}" method="POST">
-{% endif %}
+<form id="post-form" method="POST">
 {% csrf_token %}
 <div class="modal-header">
     <h4 class="modal-title">Редактирование записи</h4>
@@ -28,6 +24,30 @@
 </div>
 <div class="modal-footer justify-content-between">
     <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-    <button type="submit" name="submit" class="btn btn-success save">Сохранить</button>
+    <button type="button" name="submitHidden" class="btn btn-success save">Сохранить</button>
 </div>
 </form>
+<script>
+    $(document).on('click', '.btn-success.save', function () {
+        // создаем AJAX-вызов
+        $.ajax({
+            type: "POST",
+            data: $('#post-form').serialize(), // получаяем данные формы
+            url: "{% if initial_id != '' %} {% url 'edit_academic_performance' initial_id %} {% else %} {% url 'create_academic_performance' %} {% endif %}",
+            // если успешно, то
+            success: function (response) {
+                if (response.is_true == true) {
+                    console.log(response)
+                } else {
+                    console.log(response)
+                }
+            },
+            // если ошибка, то
+            error: function (response) {
+                // предупредим об ошибке
+                console.log(response)
+            }
+        });
+        return false;
+    });
+</script>

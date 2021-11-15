@@ -67,7 +67,7 @@
                                         <button type="submit" id="{{ perfomance.id }}"
                                                 class="btn btn-primary edit">Ред.
                                         </button>
-                                        <button type="submit" id="{{ perfomance.id }}" class="btn btn-danger">
+                                        <button type="submit" id="{{ perfomance.id }}" class="btn btn-danger delete">
                                             Удалить
                                         </button>
                                     </td>
@@ -133,7 +133,20 @@
         });
     </script>
     <script>
-
+        $(document).on('click', '.btn-danger.delete', function () {
+            $.ajax({
+                type: 'GET',
+                url: '{% url 'delete_academic_performance' %}' +'?id=' + this.id,
+                success: function (response) {
+                    console.log(response)
+                },
+                // если ошибка, то
+                error: function (response) {
+                    // предупредим об ошибке
+                    console.log(response)
+                }
+            })
+        })
 
         {# Открытие модалки #}
         $(document).on('click', '.btn-primary.edit', function () {
@@ -170,4 +183,5 @@
             $('#modal-lg').modal("show")
         })
     </script>
+
 {% endblock %}
