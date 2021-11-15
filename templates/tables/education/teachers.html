@@ -121,14 +121,13 @@
         $(document).on('click', '.btn-danger.delete', function () {
             $.ajax({
                 type: 'GET',
-                url: '{% url 'delete_teachers' %}' +'?id=' + this.id,
+                url: '{% url 'delete_teachers' %}' + '?id=' + this.id,
                 success: function (response) {
-                    console.log(response)
+                    toastr.success(response.text)
                 },
                 // если ошибка, то
                 error: function (response) {
-                    // предупредим об ошибке
-                    console.log(response)
+                    toastr.error(response)
                 }
             })
         })

@@ -54,7 +54,7 @@
                                     <td>{{ object.full_name }}</td>
                                     <td>{{ object.place_of_work }}</td>
                                     <td>{{ object.phone_number }}</td>
-{#                                    TODO#}
+                                    {#                                    TODO#}
                                     <td>TODO</td>
                                     <td>
                                         <button type="submit" id="{{ object.id }}"
@@ -130,12 +130,11 @@
                 type: 'GET',
                 url: '{% url 'delete_parents' %}' + '?id=' + this.id,
                 success: function (response) {
-                    console.log(response)
+                    toastr.success(response.text)
                 },
                 // если ошибка, то
                 error: function (response) {
-                    // предупредим об ошибке
-                    console.log(response)
+                    toastr.error(response)
                 }
             })
         })

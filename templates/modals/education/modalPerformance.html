@@ -36,16 +36,11 @@
             url: "{% if initial_id != '' %} {% url 'edit_performance' initial_id %} {% else %} {% url 'create_performance' %} {% endif %}",
             // если успешно, то
             success: function (response) {
-                if (response.is_true == true) {
-                    console.log(response)
-                } else {
-                    console.log(response)
-                }
+                toastr.success(response.text)
             },
             // если ошибка, то
             error: function (response) {
-                // предупредим об ошибке
-                console.log(response)
+                toastr.error(response)
             }
         });
         return false;
