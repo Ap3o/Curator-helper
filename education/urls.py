@@ -52,4 +52,12 @@ urlpatterns = [
     url('^hobbies/delete/$', views.hobbies_delete,
         name="delete_hobbies"),
     url('^hobbies/create/$', views.hobbies_create, name="create_hobbies"),
+
+    # performance
+    url('^performance/$', views.performance, name="performance"),
+    url('^performance/get-modal/$', views.performance_modal, name="modal_performance"),
+    url('^performance/edit/(?P<pk>\d+)/$', views.performance_edit, name="edit_performance"),
+    url('^performance/delete/$', views.performance_delete,
+        name="delete_performance"),
+    url('^performance/create/$', views.performance_create, name="create_performance"),
 ]

@@ -13,6 +13,60 @@ def dashboard(request):
     return render(request, "dashboard.html")
 
 
+def performance(request):
+    objects = models.Performance.objects.all()
+    return render(request, "tables/performance.html", {"content": objects})
+
+
+def performance_modal(request):
+    if request.method == "GET":
+        initial_id = request.GET.get("initial_id", '')
+        if initial_id != '':
+            # Если это запись для редактирования
+            initial_model = models.Performance.objects.get(id=initial_id)
+
+            initial_data = {
+                "student": initial_model.student,
+                "subject": initial_model.subject,
+                "mark": initial_model.mark,
+            }
+            form = forms.PerformanceForm(initial=initial_data)
+            return render(request, "modals/modalPerformance.html", {"form": form, 'initial_id': initial_id})
+        else:
+            form = forms.PerformanceForm()
+            return render(request, "modals/modalPerformance.html", {"form": form, 'initial_id': ''})
+
+
+@require_http_methods(["GET"])
+def performance_delete(request):
+    models.Performance.objects.get(id=request.GET.get("id", '')).delete()
+    return JsonResponse({"result": True, "text": "Запись удалена!"})
+
+
+@require_http_methods(["POST"])
+def performance_edit(request, pk):
+    model = models.Performance.objects.get(id=pk)
+
+    model.student = models.Student.objects.get(id=request.POST.get('student'))
+    model.subject = models.Subject.objects.get(id=request.POST.get('subject'))
+    model.mark = request.POST.get('mark')
+
+    model.save()
+    return JsonResponse({"result": True, "text": "Запись обновлена!"})
+
+
+@require_http_methods(["POST"])
+def performance_create(request):
+    model = models.Performance()
+    print(request.POST)
+    model.student = models.Student.objects.get(id=request.POST.get('student'))
+    model.subject = models.Subject.objects.get(id=request.POST.get('subject'))
+    model.mark = request.POST.get('mark')
+
+    model.save()
+    return JsonResponse({"result": True, "text": "Запись создана!"})
+
+
 def hobbies(request):
     objects = models.Hobbies.objects.all()
     return render(request, "tables/hobbies.html", {"content": objects})

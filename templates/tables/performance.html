@@ -1,0 +1,175 @@
+{% extends 'wrapper.html' %}
+{% load static %}
+{% block title %}
+    <title>C-H | Успеваемость</title>
+{% endblock %}
+{% block head %}
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{% static 'plugins/datatables-bs4/css/dataTables.bootstrap4.css' %}">
+    <!-- Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+
+    {#    <link rel="stylesheet" href="{% static 'plugins/select2/css/select2.min.css' %}">#}
+    {#    <link rel="stylesheet" href="{% static 'plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css' %}">#}
+
+{% endblock %}
+{% block content %}
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Успеваемость</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-12">
+                <!-- /.card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Редактирование успеваемости</h3>
+                    </div>
+                    <button type="submit" id="" class="btn btn-success create">
+                        Добавить запись
+                    </button>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th>Студент</th>
+                                <th>Дисциплина</th>
+                                <th>Оценка</th>
+                                <th>Действие</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for object in content %}
+                                <tr>
+                                    <td>{{ object.student }}</td>
+                                    <td>{{ object.subject }}</td>
+                                    <td>{{ object.mark }}</td>
+                                    <td>
+                                        <button type="submit" id="{{ object.id }}"
+                                                class="btn btn-primary edit">Ред.
+                                        </button>
+                                        <button type="submit" id="{{ object.id }}" class="btn btn-danger delete">
+                                            Удалить
+                                        </button>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <th>Студент</th>
+                                <th>Дисциплина</th>
+                                <th>Оценка</th>
+                                <th>Действие</th>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <div class="modal fade" id="modal-lg">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+{% endblock %}
+{% block scripts %}
+
+    <script src="{% static 'staticdist/js/adminlte.min.js' %}"></script>
+    <!-- DataTables -->
+    <script src="{% static 'plugins/datatables/jquery.dataTables.js' %}"></script>
+    <script src="{% static 'plugins/datatables-bs4/js/dataTables.bootstrap4.js' %}"></script>
+    <!-- Select2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.min.js"></script>
+    <script src="{% static 'django_select2/django_select2.js' %}"></script>
+    <!-- Bootstrap4 Duallistbox -->
+    <script src="{% static 'plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js' %}"></script>
+    <script>
+
+        {# init datatables #}
+        $(function () {
+            $("#example1").DataTable();
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+            });
+        });
+    </script>
+    <script>
+        $(document).on('click', '.btn-danger.delete', function () {
+            $.ajax({
+                type: 'GET',
+                url: '{% url 'delete_performance' %}' +'?id=' + this.id,
+                success: function (response) {
+                    console.log(response)
+                },
+                // если ошибка, то
+                error: function (response) {
+                    // предупредим об ошибке
+                    console.log(response)
+                }
+            })
+        })
+
+        {# Открытие модалки #}
+        $(document).on('click', '.btn-primary.edit', function () {
+            $(".modal-content").children().remove()
+
+            $.ajax({
+                type: 'GET',
+                url: '{% url 'modal_performance' %}' + '?initial_id=' + this.id
+            }).then(function (data) {
+                $(".modal-content").append(data)
+                $('.django-select2').djangoSelect2();
+                $('.select2bs4').select2({
+                    theme: 'bootstrap4'
+                })
+            })
+
+            $('#modal-lg').modal("show")
+        })
+
+        $(document).on('click', '.btn-success.create', function () {
+            $(".modal-content").children().remove()
+
+            $.ajax({
+                type: 'GET',
+                url: '{% url 'modal_performance' %}'
+            }).then(function (data) {
+                $(".modal-content").append(data)
+                $('.django-select2').djangoSelect2();
+                $('.select2bs4').select2({
+                    theme: 'bootstrap4'
+                })
+            })
+
+            $('#modal-lg').modal("show")
+        })
+    </script>
+
+{% endblock %}
