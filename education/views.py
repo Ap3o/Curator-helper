@@ -15,7 +15,7 @@ def dashboard(request):
 
 def performance(request):
     objects = models.Performance.objects.all()
-    return render(request, "tables/performance.html", {"content": objects})
+    return render(request, "tables/education/performance.html", {"content": objects})
 
 
 def performance_modal(request):
@@ -31,10 +31,10 @@ def performance_modal(request):
                 "mark": initial_model.mark,
             }
             form = forms.PerformanceForm(initial=initial_data)
-            return render(request, "modals/modalPerformance.html", {"form": form, 'initial_id': initial_id})
+            return render(request, "modals/education/modalPerformance.html", {"form": form, 'initial_id': initial_id})
         else:
             form = forms.PerformanceForm()
-            return render(request, "modals/modalPerformance.html", {"form": form, 'initial_id': ''})
+            return render(request, "modals/education/modalPerformance.html", {"form": form, 'initial_id': ''})
 
 
 @require_http_methods(["GET"])
@@ -69,7 +69,7 @@ def performance_create(request):
 
 def hobbies(request):
     objects = models.Hobbies.objects.all()
-    return render(request, "tables/hobbies.html", {"content": objects})
+    return render(request, "tables/education/hobbies.html", {"content": objects})
 
 
 def hobbies_modal(request):
@@ -84,10 +84,10 @@ def hobbies_modal(request):
                 "hobby": initial_model.hobby,
             }
             form = forms.HobbiesForm(initial=initial_data)
-            return render(request, "modals/modalHobbies.html", {"form": form, 'initial_id': initial_id})
+            return render(request, "modals/education/modalHobbies.html", {"form": form, 'initial_id': initial_id})
         else:
             form = forms.HobbiesForm()
-            return render(request, "modals/modalHobbies.html", {"form": form, 'initial_id': ''})
+            return render(request, "modals/education/modalHobbies.html", {"form": form, 'initial_id': ''})
 
 
 @require_http_methods(["GET"])
@@ -119,7 +119,7 @@ def hobbies_create(request):
 
 def subjects(request):
     objects = models.Subject.objects.all()
-    return render(request, "tables/subjects.html", {"content": objects})
+    return render(request, "tables/education/subjects.html", {"content": objects})
 
 
 def subjects_modal(request):
@@ -134,10 +134,10 @@ def subjects_modal(request):
                 "teacher": initial_model.teacher,
             }
             form = forms.SubjectForm(initial=initial_data)
-            return render(request, "modals/modalSubjects.html", {"form": form, 'initial_id': initial_id})
+            return render(request, "modals/education/modalSubjects.html", {"form": form, 'initial_id': initial_id})
         else:
             form = forms.SubjectForm()
-            return render(request, "modals/modalSubjects.html", {"form": form, 'initial_id': ''})
+            return render(request, "modals/education/modalSubjects.html", {"form": form, 'initial_id': ''})
 
 
 @require_http_methods(["GET"])
@@ -170,7 +170,7 @@ def subjects_create(request):
 
 def parents(request):
     objects = models.Parent.objects.all()
-    return render(request, "tables/parents.html", {"content": objects})
+    return render(request, "tables/education/parents.html", {"content": objects})
 
 
 def parents_modal(request):
@@ -188,10 +188,10 @@ def parents_modal(request):
                 # "student": initial_model.student
             }
             form = forms.ParentsForm(initial=initial_data)
-            return render(request, "modals/modalParents.html", {"form": form, 'initial_id': initial_id})
+            return render(request, "modals/education/modalParents.html", {"form": form, 'initial_id': initial_id})
         else:
             form = forms.ParentsForm()
-            return render(request, "modals/modalParents.html", {"form": form, 'initial_id': ''})
+            return render(request, "modals/education/modalParents.html", {"form": form, 'initial_id': ''})
 
 
 @require_http_methods(["GET"])
@@ -231,7 +231,7 @@ def parents_create(request):
 
 def teachers(request):
     objects = models.Teacher.objects.all()
-    return render(request, "tables/teachers.html", {"content": objects})
+    return render(request, "tables/education/teachers.html", {"content": objects})
 
 
 def teachers_modal(request):
@@ -246,10 +246,10 @@ def teachers_modal(request):
                 "department": initial_model.department,
             }
             form = forms.TeachersForm(initial=initial_data)
-            return render(request, "modals/modalTeachers.html", {"form": form, 'initial_id': initial_id})
+            return render(request, "modals/education/modalTeachers.html", {"form": form, 'initial_id': initial_id})
         else:
             form = forms.TeachersForm()
-            return render(request, "modals/modalTeachers.html", {"form": form, 'initial_id': ''})
+            return render(request, "modals/education/modalTeachers.html", {"form": form, 'initial_id': ''})
 
 
 @require_http_methods(["GET"])
@@ -282,7 +282,7 @@ def teachers_create(request):
 
 def student(request):
     objects = models.Student.objects.all()
-    return render(request, "tables/students.html", {"content": objects})
+    return render(request, "tables/education/students.html", {"content": objects})
 
 
 def student_modal(request):
@@ -298,10 +298,10 @@ def student_modal(request):
                 "home_address": initial_model.home_address,
             }
             form = forms.StudentForm(initial=initial_data)
-            return render(request, "modals/modalStudent.html", {"form": form, 'initial_id': initial_id})
+            return render(request, "modals/education/modalStudent.html", {"form": form, 'initial_id': initial_id})
         else:
             form = forms.StudentForm()
-            return render(request, "modals/modalStudent.html", {"form": form, 'initial_id': ''})
+            return render(request, "modals/education/modalStudent.html", {"form": form, 'initial_id': ''})
 
 
 @require_http_methods(["GET"])
@@ -336,7 +336,7 @@ def student_create(request):
 
 def academic_performance(request):
     academic_performance_objects = models.AcademicPerformance.objects.all()
-    return render(request, "tables/academic_performance.html", {"content": academic_performance_objects})
+    return render(request, "tables/education/academic_performance.html", {"content": academic_performance_objects})
 
 
 def academic_performance_modal(request):
@@ -354,10 +354,10 @@ def academic_performance_modal(request):
                 "mark": initial_academic_perf.mark
             }
             form = forms.AcademicPerformanceForm(initial=initial_data)
-            return render(request, "modals/modalAcademicPerformance.html", {"form": form, 'initial_id': initial_id})
+            return render(request, "modals/education/modalAcademicPerformance.html", {"form": form, 'initial_id': initial_id})
         else:
             form = forms.AcademicPerformanceForm()
-            return render(request, "modals/modalAcademicPerformance.html", {"form": form, 'initial_id': ''})
+            return render(request, "modals/education/modalAcademicPerformance.html", {"form": form, 'initial_id': ''})
 
 
 @require_http_methods(["GET"])
