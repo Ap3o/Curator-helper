@@ -64,7 +64,7 @@ class Subject(models.Model):
 # Успеваемость
 class Performance(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE, verbose_name='Студент')
-    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, verbose_name='Преподаватель')
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, verbose_name='Дисциплина')
     MARK_CHOICES = [
         ('5', '5'),
         ('4', '4'),
