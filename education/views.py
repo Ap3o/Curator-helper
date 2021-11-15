@@ -1,6 +1,7 @@
-from django.views.decorators.http import require_http_methods
-from django.shortcuts import render
 from django.http import JsonResponse
+from django.shortcuts import render
+from django.views.decorators.http import require_http_methods
+
 from . import models, forms
 
 
@@ -10,6 +11,56 @@ def index(request):
 
 def dashboard(request):
     return render(request, "dashboard.html")
+
+
+def hobbies(request):
+    objects = models.Hobbies.objects.all()
+    return render(request, "tables/hobbies.html", {"content": objects})
+
+
+def hobbies_modal(request):
+    if request.method == "GET":
+        initial_id = request.GET.get("initial_id", '')
+        if initial_id != '':
+            # Если это запись для редактирования
+            initial_model = models.Hobbies.objects.get(id=initial_id)
+
+            initial_data = {
+                "student": initial_model.student,
+                "hobby": initial_model.hobby,
+            }
+            form = forms.HobbiesForm(initial=initial_data)
+            return render(request, "modals/modalHobbies.html", {"form": form, 'initial_id': initial_id})
+        else:
+            form = forms.HobbiesForm()
+            return render(request, "modals/modalHobbies.html", {"form": form, 'initial_id': ''})
+
+
+@require_http_methods(["GET"])
+def hobbies_delete(request):
+    models.Hobbies.objects.get(id=request.GET.get("id", '')).delete()
+    return JsonResponse({"result": True, "text": "Запись удалена!"})
+
+
+@require_http_methods(["POST"])
+def hobbies_edit(request, pk):
+    model = models.Hobbies.objects.get(id=pk)
+
+    model.hobby = request.POST.get('hobby')
+    model.student = models.Student.objects.get(id=request.POST.get('student'))
+
+    model.save()
+    return JsonResponse({"result": True, "text": "Запись обновлена!"})
+
+
+@require_http_methods(["POST"])
+def hobbies_create(request):
+    model = models.Hobbies()
+
+    model.hobby = request.POST.get('hobby')
+    model.student = models.Student.objects.get(id=request.POST.get('student'))
+    model.save()
+    return JsonResponse({"result": True, "text": "Запись создана!"})
 
 
 def subjects(request):

@@ -30,6 +30,26 @@ class AcademicPerformanceWidget(s2forms.ModelSelect2Widget):
     ]
 
 
+class HobbiesForm(forms.ModelForm):
+    class Meta:
+        model = models.Hobbies
+        fields = "__all__"
+        widgets = {
+            "student": StudentWidget
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(HobbiesForm, self).__init__(*args, **kwargs)
+
+        # class
+        self.fields["student"].widget.attrs.update({"class": "form-control select2"})
+        self.fields["hobby"].widget.attrs.update({"class": "form-control select2"})
+
+        # style
+        self.fields["student"].widget.attrs.update({"style": "width: 100%"})
+        self.fields["hobby"].widget.attrs.update({"style": "width: 100%"})
+
+
 class ParentsForm(forms.ModelForm):
     class Meta:
         model = models.Parent

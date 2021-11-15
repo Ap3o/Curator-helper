@@ -44,4 +44,12 @@ urlpatterns = [
     url('^subjects/delete/$', views.subjects_delete,
         name="delete_subjects"),
     url('^subjects/create/$', views.subjects_create, name="create_subjects"),
+
+    # hobbies
+    url('^hobbies/$', views.hobbies, name="hobbies"),
+    url('^hobbies/get-modal/$', views.hobbies_modal, name="modal_hobbies"),
+    url('^hobbies/edit/(?P<pk>\d+)/$', views.hobbies_edit, name="edit_hobbies"),
+    url('^hobbies/delete/$', views.hobbies_delete,
+        name="delete_hobbies"),
+    url('^hobbies/create/$', views.hobbies_create, name="create_hobbies"),
 ]
