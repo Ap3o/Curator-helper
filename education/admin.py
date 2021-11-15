@@ -13,11 +13,6 @@ class AdminParent(admin.ModelAdmin):
     list_display = ('full_name', 'place_of_work', 'phone_number',)
 
 
-@admin.register(models.Parents)
-class AdminStudentsParents(admin.ModelAdmin):
-    list_display = ('student', 'parent',)
-
-
 @admin.register(models.Hobbies)
 class AdminStudentsHobbies(admin.ModelAdmin):
     list_display = ('student', 'hobby',)

@@ -19,21 +19,13 @@ class Parent(models.Model):
     full_name = models.CharField(max_length=120, verbose_name="ФИО")
     place_of_work = models.CharField(max_length=200, verbose_name="Место работы")
     phone_number = models.CharField(max_length=15, verbose_name="Номер телефона")
+    student = models.ManyToManyField(Student)
 
     def __str__(self):
         return self.full_name
 
     class Meta:
         verbose_name_plural = "Родители"
-
-
-# Родители студентов
-class Parents(models.Model):
-    student = models.ForeignKey(Student, on_delete=models.CASCADE, verbose_name="Студент")
-    parent = models.ForeignKey(Parent, on_delete=models.CASCADE, verbose_name="Родитель")
-
-    class Meta:
-        verbose_name_plural = "Родители студентов"
 
 
 # Увлечения студентов
