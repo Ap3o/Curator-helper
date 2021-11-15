@@ -12,6 +12,57 @@ def dashboard(request):
     return render(request, "dashboard.html")
 
 
+def teachers(request):
+    objects = models.Teacher.objects.all()
+    return render(request, "tables/teachers.html", {"content": objects})
+
+
+def teachers_modal(request):
+    if request.method == "GET":
+        initial_id = request.GET.get("initial_id", '')
+        if initial_id != '':
+            # Если это запись для редактирования
+            initial_model = models.Teacher.objects.get(id=initial_id)
+
+            initial_data = {
+                "full_name": initial_model.full_name,
+                "department": initial_model.department,
+            }
+            form = forms.TeachersForm(initial=initial_data)
+            return render(request, "modals/modalTeachers.html", {"form": form, 'initial_id': initial_id})
+        else:
+            form = forms.TeachersForm()
+            return render(request, "modals/modalTeachers.html", {"form": form, 'initial_id': ''})
+
+
+@require_http_methods(["GET"])
+def teachers_delete(request):
+    models.Teacher.objects.get(id=request.GET.get("id", '')).delete()
+    return JsonResponse({"result": True, "text": "Запись удалена!"})
+
+
+@require_http_methods(["POST"])
+def teachers_edit(request, pk):
+    model = models.Teacher.objects.get(id=pk)
+
+    model.full_name = request.POST.get('full_name')
+    model.department = request.POST.get('department')
+
+    model.save()
+    return JsonResponse({"result": True, "text": "Запись обновлена!"})
+
+
+@require_http_methods(["POST"])
+def teachers_create(request):
+    model = models.Teacher()
+
+    model.full_name = request.POST.get('full_name')
+    model.department = request.POST.get('department')
+
+    model.save()
+    return JsonResponse({"result": True, "text": "Запись создана!"})
+
+
 def student(request):
     objects = models.Student.objects.all()
     return render(request, "tables/students.html", {"content": objects})

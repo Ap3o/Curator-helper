@@ -21,4 +21,12 @@ urlpatterns = [
     url('^students/delete/$', views.student_delete,
         name="delete_students"),
     url('^students/create/$', views.student_create, name="create_students"),
+
+    # Teachers
+    url('^teachers/$', views.teachers, name="teachers"),
+    url('^teachers/get-modal/$', views.teachers_modal, name="modal_teachers"),
+    url('^teachers/edit/(?P<pk>\d+)/$', views.teachers_edit, name="edit_teachers"),
+    url('^teachers/delete/$', views.teachers_delete,
+        name="delete_teachers"),
+    url('^teachers/create/$', views.teachers_create, name="create_teachers"),
 ]
