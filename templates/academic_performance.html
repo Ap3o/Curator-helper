@@ -39,7 +39,7 @@
                     <div class="card-header">
                         <h3 class="card-title">DataTable with default features</h3>
                     </div>
-                    <button type="submit" id="" class="btn btn-success">
+                    <button type="submit" id="" class="btn btn-success create">
                         Добавить запись
                     </button>
                     <!-- /.card-header -->
@@ -97,79 +97,8 @@
     <div class="modal fade" id="modal-lg">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Редактирование записи</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            {% for field in form %}
-                                <div class="form-group">
-                                    <label>{{ field.label }}</label>
-                                    {{ field }}
-                                </div>
-                            {% endfor %}
-                            {#                            <div class="form-group">#}
-                            {#                                <label>id</label>#}
-                            {#                                <label for="select_id"></label><select#}
-                            {#                                    class="form-control select2 select2-hidden-accessible" style="width: 100%;"#}
-                            {#                                    data-select2-id="17" tabindex="-1" aria-hidden="true" id="select_id" disabled>#}
-                            {#                            </select>#}
-                            {#                            </div>#}
-                            {#                            <div class="form-group">#}
-                            {#                                <label>ФИО Студента</label>#}
-                            {#                                <label for="select_name"></label><select#}
-                            {#                                    class="form-control select2 select2-hidden-accessible" style="width: 100%;"#}
-                            {#                                    data-select2-id="12" tabindex="-1" aria-hidden="true" id="select_name" disabled>#}
-                            {#                            </select>#}
-                            {#                            </div>#}
-                            {#                            <div class="form-group">#}
-                            {#                                <label>Дисциплина</label>#}
-                            {#                                <label for="select_subject"></label><select#}
-                            {#                                    class="form-control select2 select2-hidden-accessible" style="width: 100%;"#}
-                            {#                                    data-select2-id="13" tabindex="-1" aria-hidden="true" id="select_subject" disabled>#}
-                            {#                            </select>#}
-                            {#                            </div>#}
-                            {#                            <div class="form-group">#}
-                            {#                                <label>Преподаватель</label>#}
-                            {#                                <label for="select_teacher"></label><select#}
-                            {#                                    class="form-control select2 select2-hidden-accessible" style="width: 100%;"#}
-                            {#                                    data-select2-id="14" tabindex="-1" aria-hidden="true" id="select_teacher" disabled>#}
-                            {#                            </select>#}
-                            {#                            </div>#}
-                            {#                            <div class="form-group">#}
-                            {#                                <label>Вид аттестации</label>#}
-                            {#                                <label for="select_type"></label><select#}
-                            {#                                    class="form-control select2 select2-hidden-accessible" style="width: 100%;"#}
-                            {#                                    data-select2-id="15" tabindex="-1" aria-hidden="true" id="select_type">#}
-                            {#                                <option>Промежуточная</option>#}
-                            {#                                <option>Итоговая</option>#}
-                            {#                            </select>#}
-                            {#                            </div>#}
-                            {#                            <div class="form-group">#}
-                            {#                                <label>Оценка</label>#}
-                            {#                                <label for="select_mark"></label><select#}
-                            {#                                    class="form-control select2 select2-hidden-accessible" style="width: 100%;"#}
-                            {#                                    data-select2-id="16" tabindex="-1" aria-hidden="true" id="select_mark">#}
-                            {#                                <option>5</option>#}
-                            {#                                <option>4</option>#}
-                            {#                                <option>3</option>#}
-                            {#                                <option>2</option>#}
-                            {#                                <option>Н/А</option>#}
-                            {#                                <option>Зачёт</option>#}
-                            {#                                <option>Не зачёт</option>#}
-                            {#                            </select>#}
-                            {#                            </div>#}
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                    <button type="button" class="btn btn-success save">Сохранить</button>
-                </div>
+
+
             </div>
             <!-- /.modal-content -->
         </div>
@@ -178,17 +107,19 @@
     <!-- /.modal -->
 {% endblock %}
 {% block scripts %}
-    {{ form.media.js }}
+
     <script src="{% static 'staticdist/js/adminlte.min.js' %}"></script>
     <!-- DataTables -->
     <script src="{% static 'plugins/datatables/jquery.dataTables.js' %}"></script>
     <script src="{% static 'plugins/datatables-bs4/js/dataTables.bootstrap4.js' %}"></script>
     <!-- Select2 -->
-{#    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>#}
-{#    <script src="{% static 'plugins/select2/js/select2.full.min.js' %}"></script>#}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.min.js"></script>
+    <script src="{% static 'django_select2/django_select2.js' %}"></script>
     <!-- Bootstrap4 Duallistbox -->
     <script src="{% static 'plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js' %}"></script>
     <script>
+
+        {# init datatables #}
         $(function () {
             $("#example1").DataTable();
             $('#example2').DataTable({
@@ -202,99 +133,41 @@
         });
     </script>
     <script>
-        $('.django-select2').djangoSelect2();
-        $('.select2bs4').select2({
-            theme: 'bootstrap4'
+
+
+        {# Открытие модалки #}
+        $(document).on('click', '.btn-primary.edit', function () {
+            $(".modal-content").children().remove()
+
+            $.ajax({
+                type: 'GET',
+                url: '{% url 'modal_academic_performance' %}' + '?initial_id=' + this.id
+            }).then(function (data) {
+                $(".modal-content").append(data)
+                $('.django-select2').djangoSelect2();
+                $('.select2bs4').select2({
+                    theme: 'bootstrap4'
+                })
+            })
+
+            $('#modal-lg').modal("show")
         })
-        $('#modal-lg').modal("show")
+
+        $(document).on('click', '.btn-success.create', function () {
+            $(".modal-content").children().remove()
+
+            $.ajax({
+                type: 'GET',
+                url: '{% url 'modal_academic_performance' %}'
+            }).then(function (data) {
+                $(".modal-content").append(data)
+                $('.django-select2').djangoSelect2();
+                $('.select2bs4').select2({
+                    theme: 'bootstrap4'
+                })
+            })
+
+            $('#modal-lg').modal("show")
+        })
     </script>
-    {#    <script>#}
-    {#        let ap_id = 0;#}
-    {#        $(function () {#}
-    {#            //Initialize Select2 Elements#}
-    {#            $('.select2bs4').select2({#}
-    {#                theme: 'bootstrap4'#}
-    {#            })#}
-    {##}
-    {##}
-    {#            // Set up the Select2 control#}
-    {#            $('#select_name').select2({#}
-    {#                ajax: {#}
-    {#                    url: '{% url 'get_students' %}',#}
-    {#                    dataType: 'json',#}
-    {#                }#}
-    {#            });#}
-    {##}
-    {#            // Set up the Select2 control#}
-    {#            $('#select_subject').select2({#}
-    {#                ajax: {#}
-    {#                    url: '{% url 'get_subjects_link' %}',#}
-    {#                    dataType: 'json',#}
-    {#                }#}
-    {#            });#}
-    {##}
-    {#            // Set up the Select2 control#}
-    {#            $('#select_teacher').select2({#}
-    {#                ajax: {#}
-    {#                    url: '{% url 'get_teachers_link' %}',#}
-    {#                    dataType: 'json',#}
-    {#                }#}
-    {#            });#}
-    {##}
-    {#            // Set up the Select2 control#}
-    {#            $('#select_type').select2();#}
-    {##}
-    {#            // Set up the Select2 control#}
-    {#            $('#select_mark').select2();#}
-    {##}
-    {#            $('#select_id').select2();#}
-    {##}
-    {#            $(document).on('click', '.btn-success.save', function () {#}
-    {#                var idSelect = $('#select_id');#}
-    {#                var typeSelect = $('#select_type');#}
-    {#                var markSelect = $('#select_mark');#}
-    {#                $.ajax({#}
-    {#                    type: 'GET',#}
-    {#                    url: '{% url 'save_academic_performance' %}' + '?term=' + idSelect[0].innerText,#}
-    {#                })#}
-    {#            });#}
-    {##}
-    {#            $(document).on('click', '.btn-primary.edit', function () {#}
-    {#                $('#modal-lg').modal("show")#}
-    {##}
-    {#                // Fetch the preselected item, and add to the control#}
-    {#                var idSelect = $('#select_id');#}
-    {#                var studentSelect = $('#select_name');#}
-    {#                var subjectSelect = $('#select_subject');#}
-    {#                var teacherSelect = $('#select_teacher');#}
-    {#                var typeSelect = $('#select_type');#}
-    {#                var markSelect = $('#select_mark');#}
-    {#                ap_id = this.id;#}
-    {#                $.ajax({#}
-    {#                    type: 'GET',#}
-    {#                    url: '{% url 'get_academic_performance' %}' + '?term=' + this.id#}
-    {#                }).then(function (data) {#}
-    {#                        // create the option and append to Select2#}
-    {#                        var optionId = new Option(ap_id, 1, true, true);#}
-    {#                        idSelect.append(optionId).trigger('change');#}
-    {##}
-    {#                        var optionStudent = new Option(data.student_name, 1, true, true);#}
-    {#                        studentSelect.append(optionStudent).trigger('change');#}
-    {##}
-    {#                        var optionTeacher = new Option(data.teacher_name, 1, true, true);#}
-    {#                        teacherSelect.append(optionTeacher).trigger('change');#}
-    {##}
-    {#                        var optionSubject = new Option(data.subject_name, 1, true, true);#}
-    {#                        subjectSelect.append(optionSubject).trigger('change');#}
-    {##}
-    {#                        var optionsPerfomance = new Option(data.type, 1, true, true);#}
-    {#                        typeSelect.append(optionsPerfomance).trigger('change');#}
-    {##}
-    {#                        var optionsMark = new Option(data.mark, 1, true, true);#}
-    {#                        markSelect.append(optionsMark).trigger('change');#}
-    {#                    }#}
-    {#                )#}
-    {#            })#}
-    {#        })#}
-    {#    </script>#}
 {% endblock %}
