@@ -33,7 +33,7 @@ def get_academic_performance(request):
         'student_name': academic_performance.student.full_name,
         'teacher_name': academic_performance.teacher.full_name,
         'subject_name': academic_performance.subject.name,
-        'type': academic_performance.type_of_performance,
+        'type': academic_performance.type_of_perfomance,
         'mark': academic_performance.mark
     })
 

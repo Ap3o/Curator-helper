@@ -99,7 +99,7 @@ class AcademicPerformance(models.Model):
         ('Итоговая', 'Итоговая аттестация'),
         ('Промежуточная', 'Промежуточная аттестация'),
     ]
-    type_of_performance = models.CharField(max_length=15, choices=TYPES_CHOICES, verbose_name='Вид аттестации')
+    type_of_perfomance = models.CharField(max_length=15, choices=TYPES_CHOICES, verbose_name='Вид аттестации')
     MARK_CHOICES = [
         ('5', '5'),
         ('4', '4'),
