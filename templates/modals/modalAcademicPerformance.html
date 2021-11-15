@@ -1,3 +1,4 @@
+{#Если initial_id = '', то создаем новую запись. иначе редактируем#}
 {% if initial_id != '' %}
     <form action="{% url 'edit_academic_performance' initial_id %}" method="POST">
 {% else %}
