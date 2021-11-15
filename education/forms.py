@@ -25,7 +25,7 @@ class SubjectWidget(s2forms.ModelSelect2Widget):
 class AcademicPerformanceWidget(s2forms.ModelSelect2Widget):
     search_fields = [
         "full_name__icontains",
-        "type_of_perfomance__icontains",
+        "type_of_performance__icontains",
         "mark__icontains",
     ]
 
@@ -47,12 +47,12 @@ class AcademicPerformanceForm(forms.ModelForm):
         self.fields["student"].widget.attrs.update({"class": "form-control select2"})
         self.fields["subject"].widget.attrs.update({"class": "form-control select2"})
         self.fields["teacher"].widget.attrs.update({"class": "form-control select2"})
-        self.fields["type_of_perfomance"].widget.attrs.update({"class": "form-control select2"})
+        self.fields["type_of_performance"].widget.attrs.update({"class": "form-control select2"})
         self.fields["mark"].widget.attrs.update({"class": "form-control select2"})
 
         # style
         self.fields["student"].widget.attrs.update({"style": "width: 100%"})
         self.fields["subject"].widget.attrs.update({"style": "width: 100%"})
         self.fields["teacher"].widget.attrs.update({"style": "width: 100%"})
-        self.fields["type_of_perfomance"].widget.attrs.update({"style": "width: 100%"})
+        self.fields["type_of_performance"].widget.attrs.update({"style": "width: 100%"})
         self.fields["mark"].widget.attrs.update({"style": "width: 100%"})

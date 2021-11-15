@@ -27,7 +27,7 @@ def academic_performance_modal(request):
                 "student": initial_academic_perf.student.id,
                 "teacher": initial_academic_perf.teacher.id,
                 "subject": initial_academic_perf.subject.id,
-                "type_of_perfomance": initial_academic_perf.type_of_perfomance,
+                "type_of_performance": initial_academic_perf.type_of_performance,
                 "mark": initial_academic_perf.mark
             }
             form = forms.AcademicPerformanceForm(initial=initial_data)
@@ -42,7 +42,7 @@ def academic_performance_edit(request, pk):
     model.student = models.Student.objects.get(id=request.POST.get('student'))
     model.teacher = models.Teacher.objects.get(id=request.POST.get('teacher'))
     model.subject = models.Subject.objects.get(id=request.POST.get('subject'))
-    model.type_of_perfomance = request.POST.get('type_of_perfomance')
+    model.type_of_performance = request.POST.get('type_of_perfomance')
     model.mark = request.POST.get('mark')
 
     model.save()
@@ -54,7 +54,7 @@ def academic_performance_create(request):
     model.student = models.Student.objects.get(id=request.POST.get('student'))
     model.teacher = models.Teacher.objects.get(id=request.POST.get('teacher'))
     model.subject = models.Subject.objects.get(id=request.POST.get('subject'))
-    model.type_of_perfomance = request.POST.get('type_of_perfomance')
+    model.type_of_performance = request.POST.get('type_of_perfomance')
     model.mark = request.POST.get('mark')
 
     model.save()
