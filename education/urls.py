@@ -5,7 +5,6 @@ urlpatterns = [
     url('^$', views.index, name="wrapper"),
     url('^dashboard/$', views.dashboard, name="dashboard"),
 
-
     # Academic performance
     url('^academic-performance/$', views.academic_performance, name="academic-performance"),
     url('^academic-performance/get-modal/$', views.academic_performance_modal, name="modal_academic_performance"),
@@ -29,4 +28,12 @@ urlpatterns = [
     url('^teachers/delete/$', views.teachers_delete,
         name="delete_teachers"),
     url('^teachers/create/$', views.teachers_create, name="create_teachers"),
+
+    # Parents
+    url('^parents/$', views.parents, name="parents"),
+    url('^parents/get-modal/$', views.parents_modal, name="modal_parents"),
+    url('^parents/edit/(?P<pk>\d+)/$', views.parents_edit, name="edit_parents"),
+    url('^parents/delete/$', views.parents_delete,
+        name="delete_parents"),
+    url('^parents/create/$', views.parents_create, name="create_parents"),
 ]

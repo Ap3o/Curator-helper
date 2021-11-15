@@ -12,6 +12,67 @@ def dashboard(request):
     return render(request, "dashboard.html")
 
 
+def parents(request):
+    objects = models.Parent.objects.all()
+    return render(request, "tables/parents.html", {"content": objects})
+
+
+def parents_modal(request):
+    if request.method == "GET":
+        initial_id = request.GET.get("initial_id", '')
+        if initial_id != '':
+            # Если это запись для редактирования
+            initial_model = models.Parent.objects.get(id=initial_id)
+
+            initial_data = {
+                "full_name": initial_model.full_name,
+                "place_of_work": initial_model.place_of_work,
+                "phone_number": initial_model.phone_number,
+                # TODO
+                # "student": initial_model.student
+            }
+            form = forms.ParentsForm(initial=initial_data)
+            return render(request, "modals/modalParents.html", {"form": form, 'initial_id': initial_id})
+        else:
+            form = forms.ParentsForm()
+            return render(request, "modals/modalParents.html", {"form": form, 'initial_id': ''})
+
+
+@require_http_methods(["GET"])
+def parents_delete(request):
+    models.Parent.objects.get(id=request.GET.get("id", '')).delete()
+    return JsonResponse({"result": True, "text": "Запись удалена!"})
+
+
+@require_http_methods(["POST"])
+def parents_edit(request, pk):
+    model = models.Parent.objects.get(id=pk)
+
+    model.full_name = request.POST.get('full_name')
+    model.place_of_work = request.POST.get('place_of_work')
+    model.phone_number = request.POST.get('phone_number')
+    # TODO
+    # model.student = request.POST.get('student')
+
+    model.save()
+    return JsonResponse({"result": True, "text": "Запись обновлена!"})
+
+
+@require_http_methods(["POST"])
+def parents_create(request):
+    model = models.Parent()
+
+    model.full_name = request.POST.get('full_name')
+    model.place_of_work = request.POST.get('place_of_work')
+    model.phone_number = request.POST.get('phone_number')
+    # TODO
+    # print(request.POST.get('student'))
+    # model.student = request.POST.get('student')
+
+    model.save()
+    return JsonResponse({"result": True, "text": "Запись создана!"})
+
+
 def teachers(request):
     objects = models.Teacher.objects.all()
     return render(request, "tables/teachers.html", {"content": objects})

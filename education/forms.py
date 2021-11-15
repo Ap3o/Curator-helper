@@ -30,6 +30,31 @@ class AcademicPerformanceWidget(s2forms.ModelSelect2Widget):
     ]
 
 
+class ParentsForm(forms.ModelForm):
+    class Meta:
+        model = models.Parent
+        fields = "__all__"
+        # TODO решить проблему с ManyToMany
+        widgets = {
+            "student": StudentWidget
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(ParentsForm, self).__init__(*args, **kwargs)
+
+        # class
+        self.fields["full_name"].widget.attrs.update({"class": "form-control select2"})
+        self.fields["place_of_work"].widget.attrs.update({"class": "form-control select2"})
+        self.fields["phone_number"].widget.attrs.update({"class": "form-control select2"})
+        self.fields["student"].widget.attrs.update({"class": "form-control select2"})
+
+        # style
+        self.fields["full_name"].widget.attrs.update({"style": "width: 100%"})
+        self.fields["place_of_work"].widget.attrs.update({"style": "width: 100%"})
+        self.fields["phone_number"].widget.attrs.update({"style": "width: 100%"})
+        self.fields["student"].widget.attrs.update({"style": "width: 100%"})
+
+
 class TeachersForm(forms.ModelForm):
     class Meta:
         model = models.Teacher
