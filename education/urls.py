@@ -36,4 +36,12 @@ urlpatterns = [
     url('^parents/delete/$', views.parents_delete,
         name="delete_parents"),
     url('^parents/create/$', views.parents_create, name="create_parents"),
+
+    # Subjects
+    url('^subjects/$', views.subjects, name="subjects"),
+    url('^subjects/get-modal/$', views.subjects_modal, name="modal_subjects"),
+    url('^subjects/edit/(?P<pk>\d+)/$', views.subjects_edit, name="edit_subjects"),
+    url('^subjects/delete/$', views.subjects_delete,
+        name="delete_subjects"),
+    url('^subjects/create/$', views.subjects_create, name="create_subjects"),
 ]

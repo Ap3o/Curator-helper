@@ -55,6 +55,26 @@ class ParentsForm(forms.ModelForm):
         self.fields["student"].widget.attrs.update({"style": "width: 100%"})
 
 
+class SubjectForm(forms.ModelForm):
+    class Meta:
+        model = models.Subject
+        fields = "__all__"
+        widgets = {
+            "teacher": TeacherWidget
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(SubjectForm, self).__init__(*args, **kwargs)
+
+        # class
+        self.fields["name"].widget.attrs.update({"class": "form-control select2"})
+        self.fields["teacher"].widget.attrs.update({"class": "form-control select2"})
+
+        # style
+        self.fields["name"].widget.attrs.update({"style": "width: 100%"})
+        self.fields["teacher"].widget.attrs.update({"style": "width: 100%"})
+
+
 class TeachersForm(forms.ModelForm):
     class Meta:
         model = models.Teacher
