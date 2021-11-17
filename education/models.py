@@ -82,7 +82,7 @@ class Performance(models.Model):
         verbose_name_plural = "Успеваемость"
 
 
-# Промежуточная аттестация
+# Аттестации
 class AcademicPerformance(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE, verbose_name='Студент')
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE, verbose_name='Дисциплина')
@@ -102,9 +102,6 @@ class AcademicPerformance(models.Model):
         ('Не зачёт', 'Не зачёт')
     ]
     mark = models.CharField(max_length=8, choices=MARK_CHOICES, verbose_name='Оценка')
-
-    # def __str__(self):
-    #     return self.name
 
     class Meta:
         verbose_name_plural = "Аттестации"
