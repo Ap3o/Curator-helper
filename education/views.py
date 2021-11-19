@@ -335,7 +335,7 @@ def student_create(request):
 
 
 def academic_performance(request):
-    academic_performance_objects = models.AcademicPerformance.objects.all()
+    academic_performance_objects = models.AcademicPerformance.objects.all().select_related("student").select_related("teacher").select_related("subject")
     return render(request, "tables/education/academic_performance.html", {"content": academic_performance_objects})
 
 
