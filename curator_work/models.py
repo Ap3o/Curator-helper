@@ -5,9 +5,9 @@ from django.db import models
 
 # Отчёт
 class Report(models.Model):
-    content = models.CharField(max_length=200)
-    start_at = models.DateTimeField(verbose_name='Период от')
-    end_at = models.DateTimeField(verbose_name='Период до')
+    content = models.CharField(max_length=2000, verbose_name="Содержание")
+    start_at = models.DateField(verbose_name='Период от')
+    end_at = models.DateField(verbose_name='Период до')
 
     class Meta:
         verbose_name_plural = "Отчёты"
