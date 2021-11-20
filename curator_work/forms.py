@@ -21,7 +21,7 @@ class ReportForm(forms.ModelForm):
         self.fields["content"].widget.attrs.update({"style": "width: 100%"})
         self.fields["start_at"].widget.attrs.update({"style": "width: 100%"})
         self.fields["end_at"].widget.attrs.update({"style": "width: 100%"})
-
+        # TODO исправить маски
         self.fields["start_at"].widget.attrs.update({"data-inputmask-alias": "datetime"})
         self.fields["start_at"].widget.attrs.update({"data-inputmask-inputformat": "dd/mm/yyyy"})
         self.fields["end_at"].widget.attrs.update({"data-inputmask-alias": "datetime"})
