@@ -60,6 +60,57 @@ def report_create(request):
     return JsonResponse({"result": True, "text": "Запись создана!"})
 
 
+def parentteachermeeting(request):
+    objects = models.ParentTeacherMeeting.objects.all()
+    return render(request, "tables/curator_work/parentteachermeeting.html", {"content": objects})
+
+
+def parentteachermeeting_modal(request):
+    if request.method == "GET":
+        initial_id = request.GET.get("initial_id", '')
+        if initial_id != '':
+            # Если это запись для редактирования
+            initial_model = models.ParentTeacherMeeting.objects.get(id=initial_id)
+
+            initial_data = {
+                "content": initial_model.content,
+                "date": initial_model.date,
+            }
+            form = forms.ParentTeacherMeetingForm(initial=initial_data)
+            return render(request, "modals/curator_work/modalParentTeacherMeeting.html", {"form": form, 'initial_id': initial_id})
+        else:
+            form = forms.ParentTeacherMeetingForm()
+            return render(request, "modals/curator_work/modalParentTeacherMeeting.html", {"form": form, 'initial_id': ''})
+
+
+@require_http_methods(["GET"])
+def parentteachermeeting_delete(request):
+    models.ParentTeacherMeeting.objects.get(id=request.GET.get("id", '')).delete()
+    return JsonResponse({"result": True, "text": "Запись удалена!"})
+
+
+@require_http_methods(["POST"])
+def parentteachermeeting_edit(request, pk):
+    model = models.ParentTeacherMeeting.objects.get(id=pk)
+
+    model.content = request.POST.get('content')
+    model.date = request.POST.get('date')
+
+    model.save()
+    return JsonResponse({"result": True, "text": "Запись обновлена!"})
+
+
+@require_http_methods(["POST"])
+def parentteachermeeting_create(request):
+    model = models.ParentTeacherMeeting()
+
+    model.content = request.POST.get('content')
+    model.date = request.POST.get('date')
+
+    model.save()
+    return JsonResponse({"result": True, "text": "Запись создана!"})
+
+
 # educationalactivities
 def educationalactivities(request):
     objects = models.EducationalActivities.objects.all()

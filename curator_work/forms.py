@@ -4,6 +4,25 @@ from django_select2 import forms as s2forms
 from . import models
 
 
+class ParentTeacherMeetingForm(forms.ModelForm):
+    class Meta:
+        model = models.ParentTeacherMeeting
+        fields = "__all__"
+
+    def __init__(self, *args, **kwargs):
+        super(ParentTeacherMeetingForm, self).__init__(*args, **kwargs)
+
+        # class
+        self.fields["content"].widget.attrs.update({"class": "form-control"})
+        self.fields["date"].widget.attrs.update({"class": "form-control"})
+
+        # style
+        self.fields["content"].widget.attrs.update({"style": "width: 100%"})
+        self.fields["date"].widget.attrs.update({"style": "width: 100%"})
+
+        # TODO Date input mask
+
+
 class EducationalActivitiesForm(forms.ModelForm):
     class Meta:
         model = models.EducationalActivities
