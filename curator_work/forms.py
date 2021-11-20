@@ -4,6 +4,27 @@ from django_select2 import forms as s2forms
 from . import models
 
 
+class EducationalActivitiesForm(forms.ModelForm):
+    class Meta:
+        model = models.EducationalActivities
+        fields = "__all__"
+
+    def __init__(self, *args, **kwargs):
+        super(EducationalActivitiesForm, self).__init__(*args, **kwargs)
+
+        # class
+        self.fields["activity"].widget.attrs.update({"class": "form-control"})
+        self.fields["date"].widget.attrs.update({"class": "form-control"})
+        self.fields["note"].widget.attrs.update({"class": "form-control"})
+
+        # style
+        self.fields["activity"].widget.attrs.update({"style": "width: 100%"})
+        self.fields["date"].widget.attrs.update({"style": "width: 100%"})
+        self.fields["note"].widget.attrs.update({"style": "width: 100%"})
+
+        # TODO Date input mask
+
+
 class ReportForm(forms.ModelForm):
     class Meta:
         model = models.Report
@@ -26,4 +47,3 @@ class ReportForm(forms.ModelForm):
         self.fields["start_at"].widget.attrs.update({"data-inputmask-inputformat": "dd/mm/yyyy"})
         self.fields["end_at"].widget.attrs.update({"data-inputmask-alias": "datetime"})
         self.fields["end_at"].widget.attrs.update({"data-inputmask-inputformat": "dd/mm/yyyy"})
-

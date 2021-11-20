@@ -58,3 +58,58 @@ def report_create(request):
 
     model.save()
     return JsonResponse({"result": True, "text": "Запись создана!"})
+
+
+# educationalactivities
+def educationalactivities(request):
+    objects = models.EducationalActivities.objects.all()
+    return render(request, "tables/curator_work/educationalactivities.html", {"content": objects})
+
+
+def educationalactivities_modal(request):
+    if request.method == "GET":
+        initial_id = request.GET.get("initial_id", '')
+        if initial_id != '':
+            # Если это запись для редактирования
+            initial_model = models.EducationalActivities.objects.get(id=initial_id)
+
+            initial_data = {
+                "activity": initial_model.activity,
+                "date": initial_model.date,
+                "note": initial_model.note,
+            }
+            form = forms.EducationalActivitiesForm(initial=initial_data)
+            return render(request, "modals/curator_work/modalActivity.html", {"form": form, 'initial_id': initial_id})
+        else:
+            form = forms.EducationalActivitiesForm()
+            return render(request, "modals/curator_work/modalActivity.html", {"form": form, 'initial_id': ''})
+
+
+@require_http_methods(["GET"])
+def educationalactivities_delete(request):
+    models.EducationalActivities.objects.get(id=request.GET.get("id", '')).delete()
+    return JsonResponse({"result": True, "text": "Запись удалена!"})
+
+
+@require_http_methods(["POST"])
+def educationalactivities_edit(request, pk):
+    model = models.EducationalActivities.objects.get(id=pk)
+
+    model.activity = request.POST.get('activity')
+    model.date = request.POST.get('date')
+    model.note = request.POST.get('note')
+
+    model.save()
+    return JsonResponse({"result": True, "text": "Запись обновлена!"})
+
+
+@require_http_methods(["POST"])
+def educationalactivities_create(request):
+    model = models.EducationalActivities()
+
+    model.activity = request.POST.get('activity')
+    model.date = request.POST.get('date')
+    model.note = request.POST.get('note')
+
+    model.save()
+    return JsonResponse({"result": True, "text": "Запись создана!"})
