@@ -22,5 +22,6 @@ urlpatterns = [
     path('curator_work/', include('curator_work.urls')),
     path('homeroom/', include('homeroom.urls')),
     path('api/', include('api.urls')),
+    path('', include('core.urls')),
     path("select2/", include("django_select2.urls")),
 ]

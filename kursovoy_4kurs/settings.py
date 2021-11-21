@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'services',
     'api',
     'homeroom',
-    'curator_work'
+    'curator_work',
+    'core'
 ]
 
 MIDDLEWARE = [
