@@ -5,14 +5,6 @@ from django.views.decorators.http import require_http_methods
 from . import models, forms
 
 
-def index(request):
-    return render(request, "wrapper.html")
-
-
-def dashboard(request):
-    return render(request, "dashboard.html")
-
-
 def process_the_request(request, model, form, table_link, save_model_func, get_initial_data_func):
     if request.method == "GET":
         objects = model.objects.all()
