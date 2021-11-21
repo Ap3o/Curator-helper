@@ -120,8 +120,14 @@
     <script>
         $(document).on('click', '.btn-danger.delete', function () {
             $.ajax({
-                type: 'GET',
-                url: '{% url 'delete_teachers' %}' + '?id=' + this.id,
+                type: 'POST',
+                data: {
+                    'type': 'delete',
+                    'id': this.id,
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                },
+                url: '',
+
                 success: function (response) {
                     toastr.success(response.text)
                 },
@@ -137,8 +143,13 @@
             $(".modal-content").children().remove()
 
             $.ajax({
-                type: 'GET',
-                url: '{% url 'modal_teachers' %}' + '?initial_id=' + this.id
+                type: 'POST',
+                data: {
+                    'type': 'get_modal',
+                    'id': this.id,
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                },
+                url: '',
             }).then(function (data) {
                 $(".modal-content").append(data)
                 $('.django-select2').djangoSelect2();
@@ -154,8 +165,12 @@
             $(".modal-content").children().remove()
 
             $.ajax({
-                type: 'GET',
-                url: '{% url 'modal_teachers' %}'
+                type: 'POST',
+                data: {
+                    'type': 'get_modal',
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                },
+                url: '',
             }).then(function (data) {
                 $(".modal-content").append(data)
                 $('.django-select2').djangoSelect2();

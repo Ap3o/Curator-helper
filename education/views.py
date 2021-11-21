@@ -13,384 +13,197 @@ def dashboard(request):
     return render(request, "dashboard.html")
 
 
-def performance(request):
-    objects = models.Performance.objects.all()
-    return render(request, "tables/education/performance.html", {"content": objects})
-
-
-def performance_modal(request):
+def process_the_request(request, model, form, table_link, save_model_func, get_initial_data_func):
     if request.method == "GET":
-        initial_id = request.GET.get("initial_id", '')
-        if initial_id != '':
-            # Если это запись для редактирования
-            initial_model = models.Performance.objects.get(id=initial_id)
+        objects = model.objects.all()
+        return render(request, table_link, {"content": objects})
 
-            initial_data = {
-                "student": initial_model.student,
-                "subject": initial_model.subject,
-                "mark": initial_model.mark,
-            }
-            form = forms.PerformanceForm(initial=initial_data)
-            return render(request, "modals/education/modalPerformance.html", {"form": form, 'initial_id': initial_id})
-        else:
-            form = forms.PerformanceForm()
-            return render(request, "modals/education/modalPerformance.html", {"form": form, 'initial_id': ''})
+    if request.is_ajax():
+        if request.method == "POST":
 
+            if request.POST["type"] == "delete":
+                model.objects.get(id=request.POST["id"]).delete()
+                return JsonResponse({"result": True, "text": "Запись удалена!"})
 
-@require_http_methods(["GET"])
-def performance_delete(request):
-    models.Performance.objects.get(id=request.GET.get("id", '')).delete()
-    return JsonResponse({"result": True, "text": "Запись удалена!"})
+            if request.POST["type"] == "get_modal":
+                # Если id был передан, значит запись надо отредактировать. Если не передан - создать новую.
+                if 'id' in request.POST:
+                    _id = request.POST['id']
+                    model_to_edit = model.objects.get(id=_id)
+                    initial_data = get_initial_data_func(model_to_edit)
+                    form = form(initial=initial_data)
+                else:
+                    _id = None
+                    form = form()
+                return render(request, "modals/modal.html", {"form": form, "id": _id})
 
+            if request.POST["type"] == "save":
+                if request.POST['id'] == 'None':
+                    save_model = model()
+                    text = "Запись добавлена!"
+                else:
+                    save_model = model.objects.get(id=request.POST['id'])
+                    text = "Запись отредактирована!"
 
-@require_http_methods(["POST"])
-def performance_edit(request, pk):
-    model = models.Performance.objects.get(id=pk)
-
-    model.student = models.Student.objects.get(id=request.POST.get('student'))
-    model.subject = models.Subject.objects.get(id=request.POST.get('subject'))
-    model.mark = request.POST.get('mark')
-
-    model.save()
-    return JsonResponse({"result": True, "text": "Запись обновлена!"})
-
-
-@require_http_methods(["POST"])
-def performance_create(request):
-    model = models.Performance()
-    print(request.POST)
-    model.student = models.Student.objects.get(id=request.POST.get('student'))
-    model.subject = models.Subject.objects.get(id=request.POST.get('subject'))
-    model.mark = request.POST.get('mark')
-
-    model.save()
-    return JsonResponse({"result": True, "text": "Запись создана!"})
+                save_model_func(save_model)
+                return JsonResponse({"result": True, "text": text})
 
 
-def hobbies(request):
-    objects = models.Hobbies.objects.all()
-    return render(request, "tables/education/hobbies.html", {"content": objects})
+@require_http_methods(["GET", "POST"])
+def students(request):
+    def get_initial_data(_model):
+        initial_data = {
+            "full_name": _model.full_name,
+            "date_of_birth": _model.date_of_birth,
+            "home_address": _model.home_address,
+        }
+        return initial_data
+
+    def save_model(_model):
+        # Поля для изменения в каждой форме.
+        _model.full_name = request.POST.get('full_name')
+        _model.date_of_birth = request.POST.get('date_of_birth')
+        _model.home_address = request.POST.get('home_address')
+        _model.save()
+
+    model = models.Student
+    form = forms.StudentForm
+    table_link = "tables/education/students.html"
+    return process_the_request(request, model, form, table_link, save_model, get_initial_data)
 
 
-def hobbies_modal(request):
-    if request.method == "GET":
-        initial_id = request.GET.get("initial_id", '')
-        if initial_id != '':
-            # Если это запись для редактирования
-            initial_model = models.Hobbies.objects.get(id=initial_id)
-
-            initial_data = {
-                "student": initial_model.student,
-                "hobby": initial_model.hobby,
-            }
-            form = forms.HobbiesForm(initial=initial_data)
-            return render(request, "modals/education/modalHobbies.html", {"form": form, 'initial_id': initial_id})
-        else:
-            form = forms.HobbiesForm()
-            return render(request, "modals/education/modalHobbies.html", {"form": form, 'initial_id': ''})
-
-
-@require_http_methods(["GET"])
-def hobbies_delete(request):
-    models.Hobbies.objects.get(id=request.GET.get("id", '')).delete()
-    return JsonResponse({"result": True, "text": "Запись удалена!"})
-
-
-@require_http_methods(["POST"])
-def hobbies_edit(request, pk):
-    model = models.Hobbies.objects.get(id=pk)
-
-    model.hobby = request.POST.get('hobby')
-    model.student = models.Student.objects.get(id=request.POST.get('student'))
-
-    model.save()
-    return JsonResponse({"result": True, "text": "Запись обновлена!"})
-
-
-@require_http_methods(["POST"])
-def hobbies_create(request):
-    model = models.Hobbies()
-
-    model.hobby = request.POST.get('hobby')
-    model.student = models.Student.objects.get(id=request.POST.get('student'))
-    model.save()
-    return JsonResponse({"result": True, "text": "Запись создана!"})
-
-
-def subjects(request):
-    objects = models.Subject.objects.all()
-    return render(request, "tables/education/subjects.html", {"content": objects})
-
-
-def subjects_modal(request):
-    if request.method == "GET":
-        initial_id = request.GET.get("initial_id", '')
-        if initial_id != '':
-            # Если это запись для редактирования
-            initial_model = models.Subject.objects.get(id=initial_id)
-
-            initial_data = {
-                "name": initial_model.name,
-                "teacher": initial_model.teacher,
-            }
-            form = forms.SubjectForm(initial=initial_data)
-            return render(request, "modals/education/modalSubjects.html", {"form": form, 'initial_id': initial_id})
-        else:
-            form = forms.SubjectForm()
-            return render(request, "modals/education/modalSubjects.html", {"form": form, 'initial_id': ''})
-
-
-@require_http_methods(["GET"])
-def subjects_delete(request):
-    models.Subject.objects.get(id=request.GET.get("id", '')).delete()
-    return JsonResponse({"result": True, "text": "Запись удалена!"})
-
-
-@require_http_methods(["POST"])
-def subjects_edit(request, pk):
-    model = models.Subject.objects.get(id=pk)
-
-    model.name = request.POST.get('name')
-    model.teacher = models.Teacher.objects.get(id=request.POST.get('teacher'))
-
-    model.save()
-    return JsonResponse({"result": True, "text": "Запись обновлена!"})
-
-
-@require_http_methods(["POST"])
-def subjects_create(request):
-    model = models.Subject()
-
-    model.name = request.POST.get('name')
-    model.teacher = models.Teacher.objects.get(id=request.POST.get('teacher'))
-
-    model.save()
-    return JsonResponse({"result": True, "text": "Запись создана!"})
-
-
+@require_http_methods(["GET", "POST"])
 def parents(request):
-    objects = models.Parent.objects.all()
-    return render(request, "tables/education/parents.html", {"content": objects})
+    def get_initial_data(_model):
+        initial_data = {
+            "full_name": _model.full_name,
+            "place_of_work": _model.place_of_work,
+            "phone_number": _model.phone_number,
+            # TODO ManyToManyField
+        }
+        return initial_data
+
+    def save_model(_model):
+        # Поля для изменения в каждой форме.
+        _model.full_name = request.POST.get('full_name')
+        _model.place_of_work = request.POST.get('place_of_work')
+        _model.phone_number = request.POST.get('phone_number')
+        _model.save()
+
+    model = models.Parent
+    form = forms.ParentsForm
+    table_link = "tables/education/parents.html"
+    return process_the_request(request, model, form, table_link, save_model, get_initial_data)
 
 
-def parents_modal(request):
-    if request.method == "GET":
-        initial_id = request.GET.get("initial_id", '')
-        if initial_id != '':
-            # Если это запись для редактирования
-            initial_model = models.Parent.objects.get(id=initial_id)
+@require_http_methods(["GET", "POST"])
+def hobbies(request):
+    def get_initial_data(_model):
+        initial_data = {
+            "student": _model.student,
+            "hobby": _model.hobby,
+        }
+        return initial_data
 
-            initial_data = {
-                "full_name": initial_model.full_name,
-                "place_of_work": initial_model.place_of_work,
-                "phone_number": initial_model.phone_number,
-                # TODO
-                # "student": initial_model.student
-            }
-            form = forms.ParentsForm(initial=initial_data)
-            return render(request, "modals/education/modalParents.html", {"form": form, 'initial_id': initial_id})
-        else:
-            form = forms.ParentsForm()
-            return render(request, "modals/education/modalParents.html", {"form": form, 'initial_id': ''})
+    def save_model(_model):
+        # Поля для изменения в каждой форме.
+        _model.student = models.Student.objects.get(id=request.POST.get('student'))
+        _model.hobby = request.POST.get('hobby')
+        _model.save()
 
-
-@require_http_methods(["GET"])
-def parents_delete(request):
-    models.Parent.objects.get(id=request.GET.get("id", '')).delete()
-    return JsonResponse({"result": True, "text": "Запись удалена!"})
+    model = models.Hobbies
+    form = forms.HobbiesForm
+    table_link = "tables/education/hobbies.html"
+    return process_the_request(request, model, form, table_link, save_model, get_initial_data)
 
 
-@require_http_methods(["POST"])
-def parents_edit(request, pk):
-    model = models.Parent.objects.get(id=pk)
-
-    model.full_name = request.POST.get('full_name')
-    model.place_of_work = request.POST.get('place_of_work')
-    model.phone_number = request.POST.get('phone_number')
-    # TODO
-    # model.student = request.POST.get('student')
-
-    model.save()
-    return JsonResponse({"result": True, "text": "Запись обновлена!"})
-
-
-@require_http_methods(["POST"])
-def parents_create(request):
-    model = models.Parent()
-
-    model.full_name = request.POST.get('full_name')
-    model.place_of_work = request.POST.get('place_of_work')
-    model.phone_number = request.POST.get('phone_number')
-    # TODO
-    # print(request.POST.get('student'))
-    # model.student = request.POST.get('student')
-
-    model.save()
-    return JsonResponse({"result": True, "text": "Запись создана!"})
-
-
+@require_http_methods(["GET", "POST"])
 def teachers(request):
-    objects = models.Teacher.objects.all()
-    return render(request, "tables/education/teachers.html", {"content": objects})
+    def get_initial_data(_model):
+        initial_data = {
+            "full_name": _model.full_name,
+            "department": _model.department,
+        }
+        return initial_data
+
+    def save_model(_model):
+        # Поля для изменения в каждой форме.
+        _model.full_name = request.POST.get('full_name')
+        _model.department = request.POST.get('department')
+        _model.save()
+
+    model = models.Teacher
+    form = forms.TeachersForm
+    table_link = "tables/education/teachers.html"
+    return process_the_request(request, model, form, table_link, save_model, get_initial_data)
 
 
-def teachers_modal(request):
-    if request.method == "GET":
-        initial_id = request.GET.get("initial_id", '')
-        if initial_id != '':
-            # Если это запись для редактирования
-            initial_model = models.Teacher.objects.get(id=initial_id)
+@require_http_methods(["GET", "POST"])
+def subjects(request):
+    def get_initial_data(_model):
+        initial_data = {
+            "name": _model.name,
+            "teacher": _model.teacher,
+        }
+        return initial_data
 
-            initial_data = {
-                "full_name": initial_model.full_name,
-                "department": initial_model.department,
-            }
-            form = forms.TeachersForm(initial=initial_data)
-            return render(request, "modals/education/modalTeachers.html", {"form": form, 'initial_id': initial_id})
-        else:
-            form = forms.TeachersForm()
-            return render(request, "modals/education/modalTeachers.html", {"form": form, 'initial_id': ''})
+    def save_model(_model):
+        # Поля для изменения в каждой форме.
+        _model.name = request.POST.get('name')
+        _model.teacher = models.Teacher.objects.get(id=request.POST.get('teacher'))
+        _model.save()
 
-
-@require_http_methods(["GET"])
-def teachers_delete(request):
-    models.Teacher.objects.get(id=request.GET.get("id", '')).delete()
-    return JsonResponse({"result": True, "text": "Запись удалена!"})
+    model = models.Subject
+    form = forms.SubjectForm
+    table_link = "tables/education/subjects.html"
+    return process_the_request(request, model, form, table_link, save_model, get_initial_data)
 
 
-@require_http_methods(["POST"])
-def teachers_edit(request, pk):
-    model = models.Teacher.objects.get(id=pk)
+@require_http_methods(["GET", "POST"])
+def performance(request):
+    def get_initial_data(_model):
+        initial_data = {
+            "student": _model.student,
+            "subject": _model.subject,
+            "mark": _model.mark,
+        }
+        return initial_data
 
-    model.full_name = request.POST.get('full_name')
-    model.department = request.POST.get('department')
+    def save_model(_model):
+        # Поля для изменения в каждой форме.
+        _model.student = models.Student.objects.get(id=request.POST.get('student'))
+        _model.subject = models.Subject.objects.get(id=request.POST.get('subject'))
+        _model.mark = request.POST.get('mark')
+        _model.save()
 
-    model.save()
-    return JsonResponse({"result": True, "text": "Запись обновлена!"})
-
-
-@require_http_methods(["POST"])
-def teachers_create(request):
-    model = models.Teacher()
-
-    model.full_name = request.POST.get('full_name')
-    model.department = request.POST.get('department')
-
-    model.save()
-    return JsonResponse({"result": True, "text": "Запись создана!"})
-
-
-def student(request):
-    objects = models.Student.objects.all()
-    return render(request, "tables/education/students.html", {"content": objects})
+    model = models.Performance
+    form = forms.PerformanceForm
+    table_link = "tables/education/performance.html"
+    return process_the_request(request, model, form, table_link, save_model, get_initial_data)
 
 
-def student_modal(request):
-    if request.method == "GET":
-        initial_id = request.GET.get("initial_id", '')
-        if initial_id != '':
-            # Если это запись для редактирования
-            initial_model = models.Student.objects.get(id=initial_id)
-
-            initial_data = {
-                "full_name": initial_model.full_name,
-                "date_of_birth": initial_model.date_of_birth,
-                "home_address": initial_model.home_address,
-            }
-            form = forms.StudentForm(initial=initial_data)
-            return render(request, "modals/education/modalStudent.html", {"form": form, 'initial_id': initial_id})
-        else:
-            form = forms.StudentForm()
-            return render(request, "modals/education/modalStudent.html", {"form": form, 'initial_id': ''})
-
-
-@require_http_methods(["GET"])
-def student_delete(request):
-    models.Student.objects.get(id=request.GET.get("id", '')).delete()
-    return JsonResponse({"result": True, "text": "Запись удалена!"})
-
-
-@require_http_methods(["POST"])
-def student_edit(request, pk):
-    model = models.Student.objects.get(id=pk)
-
-    model.full_name = request.POST.get('full_name')
-    model.date_of_birth = request.POST.get('date_of_birth')
-    model.home_address = request.POST.get('home_address')
-
-    model.save()
-    return JsonResponse({"result": True, "text": "Запись обновлена!"})
-
-
-@require_http_methods(["POST"])
-def student_create(request):
-    model = models.Student()
-
-    model.full_name = request.POST.get('full_name')
-    model.date_of_birth = request.POST.get('date_of_birth')
-    model.home_address = request.POST.get('home_address')
-
-    model.save()
-    return JsonResponse({"result": True, "text": "Запись создана!"})
-
-
+@require_http_methods(["GET", "POST"])
 def academic_performance(request):
-    academic_performance_objects = models.AcademicPerformance.objects.all().select_related("student").select_related("teacher").select_related("subject")
-    return render(request, "tables/education/academic_performance.html", {"content": academic_performance_objects})
+    def get_initial_data(_model):
+        initial_data = {
+            "student": _model.student,
+            "subject": _model.subject,
+            "teacher": _model.teacher,
+            "type_of_perfomance": _model.type_of_perfomance,
+            "mark": _model.mark,
+        }
+        return initial_data
 
+    def save_model(_model):
+        # Поля для изменения в каждой форме.
+        _model.student = models.Student.objects.get(id=request.POST.get('student'))
+        _model.subject = models.Subject.objects.get(id=request.POST.get('subject'))
+        _model.teacher = models.Teacher.objects.get(id=request.POST.get('teacher'))
+        _model.type_of_perfomance = request.POST.get('type_of_perfomance')
+        _model.mark = request.POST.get('mark')
+        _model.save()
 
-def academic_performance_modal(request):
-    if request.method == "GET":
-        initial_id = request.GET.get("initial_id", '')
-        if initial_id != '':
-            # Если это запись для редактирования
-            initial_academic_perf = models.AcademicPerformance.objects.get(id=initial_id)
-
-            initial_data = {
-                "student": initial_academic_perf.student.id,
-                "teacher": initial_academic_perf.teacher.id,
-                "subject": initial_academic_perf.subject.id,
-                "type_of_perfomance": initial_academic_perf.type_of_perfomance,
-                "mark": initial_academic_perf.mark
-            }
-            form = forms.AcademicPerformanceForm(initial=initial_data)
-            return render(request, "modals/education/modalAcademicPerformance.html", {"form": form, 'initial_id': initial_id})
-        else:
-            form = forms.AcademicPerformanceForm()
-            return render(request, "modals/education/modalAcademicPerformance.html", {"form": form, 'initial_id': ''})
-
-
-@require_http_methods(["GET"])
-def academic_performance_delete(request):
-    models.AcademicPerformance.objects.get(id=request.GET.get("id", '')).delete()
-    return JsonResponse({"result": True, "text": "Запись удалена!"})
-
-
-@require_http_methods(["POST"])
-def academic_performance_edit(request, pk):
-    model = models.AcademicPerformance.objects.get(id=pk)
-
-    set_fields_academic_performance(model, request)
-    model.type_of_perfomance = request.POST.get('type_of_perfomance')
-    model.mark = request.POST.get('mark')
-
-    model.save()
-    return JsonResponse({"result": True, "text": "Запись обновлена!"})
-
-
-@require_http_methods(["POST"])
-def academic_performance_create(request):
-    model = models.AcademicPerformance()
-
-    set_fields_academic_performance(model, request)
-    model.type_of_perfomance = request.POST.get('type_of_perfomance')
-    model.mark = request.POST.get('mark')
-
-    model.save()
-    return JsonResponse({"result": True, "text": "Запись создана!"})
-
-
-def set_fields_academic_performance(model, request):
-    model.student = models.Student.objects.get(id=request.POST.get('student'))
-    model.teacher = models.Teacher.objects.get(id=request.POST.get('teacher'))
-    model.subject = models.Subject.objects.get(id=request.POST.get('subject'))
+    model = models.AcademicPerformance
+    form = forms.AcademicPerformanceForm
+    table_link = "tables/education/academic_performance.html"
+    return process_the_request(request, model, form, table_link, save_model, get_initial_data)
