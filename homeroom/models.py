@@ -20,6 +20,9 @@ class ClassPeriod(models.Model):
     ]
     month = models.CharField(max_length=15, choices=MONTH_CHOICES, verbose_name='Месяц')
 
+    def __str__(self):
+        return self.topic
+
     class Meta:
         verbose_name_plural = "Тематика классных часов"
 

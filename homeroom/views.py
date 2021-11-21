@@ -6,7 +6,7 @@ from . import models
 from . import forms
 
 
-def process_the_request(request, model, form, table_link, save_model_func):
+def process_the_request(request, model, form, table_link, save_model_func, get_initial_data_func):
     if request.method == "GET":
         objects = model.objects.all()
         return render(request, table_link, {"content": objects})
@@ -23,10 +23,7 @@ def process_the_request(request, model, form, table_link, save_model_func):
                 if 'id' in request.POST:
                     _id = request.POST['id']
                     model_to_edit = model.objects.get(id=_id)
-                    initial_data = {
-                        "topic": model_to_edit.topic,
-                        "month": model_to_edit.month,
-                    }
+                    initial_data = get_initial_data_func(model_to_edit)
                     form = form(initial=initial_data)
                 else:
                     _id = None
@@ -47,6 +44,13 @@ def process_the_request(request, model, form, table_link, save_model_func):
 
 @require_http_methods(["GET", "POST"])
 def class_period(request):
+    def get_initial_data(_model):
+        initial_data = {
+            "topic": _model.topic,
+            "month": _model.month,
+        }
+        return initial_data
+
     def save_model(_model):
         # Поля для изменения в каждой форме.
         _model.topic = request.POST.get('topic')
@@ -56,4 +60,25 @@ def class_period(request):
     model = models.ClassPeriod
     form = forms.ClassPeriodForm
     table_link = "tables/homeroom/classperiod.html"
-    return process_the_request(request, model, form, table_link, save_model)
+    return process_the_request(request, model, form, table_link, save_model, get_initial_data)
+
+
+@require_http_methods(["GET", "POST"])
+def spent_class_period(request):
+    def get_initial_data(_model):
+        initial_data = {
+            "class_period": _model.class_period,
+            "content": _model.content,
+        }
+        return initial_data
+
+    def save_model(_model):
+        # Поля для изменения в каждой форме.
+        _model.class_period = models.ClassPeriod.objects.get(id=request.POST.get('class_period'))
+        _model.content = request.POST.get('content')
+        _model.save()
+
+    model = models.SpentClassPeriod
+    form = forms.SpentClassPeriodForm
+    table_link = "tables/homeroom/spentclassperiod.html"
+    return process_the_request(request, model, form, table_link, save_model, get_initial_data)

@@ -19,3 +19,29 @@ class ClassPeriodForm(forms.ModelForm):
         # style
         self.fields["topic"].widget.attrs.update({"style": "width: 100%"})
         self.fields["month"].widget.attrs.update({"style": "width: 100%"})
+
+
+class ClassPeriodWidget(s2forms.ModelSelect2Widget):
+    search_fields = [
+        "topic__icontains",
+    ]
+
+
+class SpentClassPeriodForm(forms.ModelForm):
+    class Meta:
+        model = models.SpentClassPeriod
+        fields = "__all__"
+        widgets = {
+            "class_period": ClassPeriodWidget
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(SpentClassPeriodForm, self).__init__(*args, **kwargs)
+
+        # class
+        self.fields["class_period"].widget.attrs.update({"class": "form-control select2"})
+        self.fields["content"].widget.attrs.update({"class": "form-control"})
+
+        # style
+        self.fields["class_period"].widget.attrs.update({"style": "width: 100%"})
+        self.fields["content"].widget.attrs.update({"style": "width: 100%"})
