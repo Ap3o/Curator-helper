@@ -12,7 +12,7 @@ def get_subject_name(subject_id):
     return models.Subject.objects.get(id=subject_id).name
 
 
-def dashboard(request):
+def final_performance(request):
     objects = models.AcademicPerformance.objects.values('subject', 'mark').filter(type_of_perfomance="Итоговая").order_by('subject').annotate(
         count=Count('mark')
     )
