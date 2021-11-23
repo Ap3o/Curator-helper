@@ -1,1258 +1,5 @@
 [
   {
-    "model": "admin.logentry",
-    "pk": 1,
-    "fields": {
-      "action_time": "2021-09-25T20:31:02.254Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "1",
-      "object_repr": "Ярочкина Е.Д.",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 2,
-    "fields": {
-      "action_time": "2021-09-25T20:31:24.613Z",
-      "user": 1,
-      "content_type": 10,
-      "object_id": "1",
-      "object_repr": "Системное программирование",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 3,
-    "fields": {
-      "action_time": "2021-09-25T20:31:50.715Z",
-      "user": 1,
-      "content_type": 8,
-      "object_id": "1",
-      "object_repr": "Флесаков Никита Владимирович",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 4,
-    "fields": {
-      "action_time": "2021-09-25T20:32:01.155Z",
-      "user": 1,
-      "content_type": 13,
-      "object_id": "1",
-      "object_repr": "Hobbies object (1)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 5,
-    "fields": {
-      "action_time": "2021-09-25T20:32:38.336Z",
-      "user": 1,
-      "content_type": 7,
-      "object_id": "1",
-      "object_repr": "Никулина Татьяна Владимировна",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 6,
-    "fields": {
-      "action_time": "2021-09-25T20:32:44.202Z",
-      "user": 1,
-      "content_type": 12,
-      "object_id": "1",
-      "object_repr": "Parents object (1)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 7,
-    "fields": {
-      "action_time": "2021-09-25T20:33:28.082Z",
-      "user": 1,
-      "content_type": 11,
-      "object_id": "1",
-      "object_repr": "Performance object (1)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 8,
-    "fields": {
-      "action_time": "2021-09-25T20:33:34.131Z",
-      "user": 1,
-      "content_type": 11,
-      "object_id": "2",
-      "object_repr": "Performance object (2)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 9,
-    "fields": {
-      "action_time": "2021-09-25T20:33:49.653Z",
-      "user": 1,
-      "content_type": 11,
-      "object_id": "2",
-      "object_repr": "Performance object (2)",
-      "action_flag": 2,
-      "change_message": "[]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 10,
-    "fields": {
-      "action_time": "2021-09-25T20:33:53.352Z",
-      "user": 1,
-      "content_type": 11,
-      "object_id": "3",
-      "object_repr": "Performance object (3)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 11,
-    "fields": {
-      "action_time": "2021-09-25T20:34:05.780Z",
-      "user": 1,
-      "content_type": 14,
-      "object_id": "1",
-      "object_repr": "AcademicPerformance object (1)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 12,
-    "fields": {
-      "action_time": "2021-09-25T21:43:07.720Z",
-      "user": 1,
-      "content_type": 8,
-      "object_id": "2",
-      "object_repr": "Плотников Андрей Дмитриевич",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 13,
-    "fields": {
-      "action_time": "2021-09-25T21:43:35.290Z",
-      "user": 1,
-      "content_type": 8,
-      "object_id": "3",
-      "object_repr": "Мезенина Арина Олеговна",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 14,
-    "fields": {
-      "action_time": "2021-09-25T21:43:57.633Z",
-      "user": 1,
-      "content_type": 13,
-      "object_id": "2",
-      "object_repr": "Hobbies object (2)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 15,
-    "fields": {
-      "action_time": "2021-09-25T21:44:03.633Z",
-      "user": 1,
-      "content_type": 13,
-      "object_id": "3",
-      "object_repr": "Hobbies object (3)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 16,
-    "fields": {
-      "action_time": "2021-09-25T21:44:27.066Z",
-      "user": 1,
-      "content_type": 11,
-      "object_id": "4",
-      "object_repr": "Performance object (4)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 17,
-    "fields": {
-      "action_time": "2021-09-25T21:44:31.343Z",
-      "user": 1,
-      "content_type": 11,
-      "object_id": "5",
-      "object_repr": "Performance object (5)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 18,
-    "fields": {
-      "action_time": "2021-09-25T21:44:35.133Z",
-      "user": 1,
-      "content_type": 11,
-      "object_id": "6",
-      "object_repr": "Performance object (6)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 19,
-    "fields": {
-      "action_time": "2021-09-25T21:44:39.603Z",
-      "user": 1,
-      "content_type": 11,
-      "object_id": "7",
-      "object_repr": "Performance object (7)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 20,
-    "fields": {
-      "action_time": "2021-09-25T21:44:42.624Z",
-      "user": 1,
-      "content_type": 11,
-      "object_id": "8",
-      "object_repr": "Performance object (8)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 21,
-    "fields": {
-      "action_time": "2021-09-25T21:44:48.582Z",
-      "user": 1,
-      "content_type": 11,
-      "object_id": "9",
-      "object_repr": "Performance object (9)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 22,
-    "fields": {
-      "action_time": "2021-09-25T21:45:06.551Z",
-      "user": 1,
-      "content_type": 14,
-      "object_id": "2",
-      "object_repr": "AcademicPerformance object (2)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 23,
-    "fields": {
-      "action_time": "2021-09-25T21:45:18.135Z",
-      "user": 1,
-      "content_type": 14,
-      "object_id": "3",
-      "object_repr": "AcademicPerformance object (3)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 24,
-    "fields": {
-      "action_time": "2021-09-26T11:30:07.058Z",
-      "user": 1,
-      "content_type": 15,
-      "object_id": "1",
-      "object_repr": "UserProfile object (1)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 25,
-    "fields": {
-      "action_time": "2021-09-26T11:31:05.870Z",
-      "user": 1,
-      "content_type": 15,
-      "object_id": "1",
-      "object_repr": "UserProfile object (1)",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 26,
-    "fields": {
-      "action_time": "2021-09-26T11:45:31.280Z",
-      "user": 1,
-      "content_type": 15,
-      "object_id": "1",
-      "object_repr": "UserProfile object (1)",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 27,
-    "fields": {
-      "action_time": "2021-09-26T11:49:18.382Z",
-      "user": 1,
-      "content_type": 15,
-      "object_id": "1",
-      "object_repr": "UserProfile object (1)",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 28,
-    "fields": {
-      "action_time": "2021-09-26T12:49:58.495Z",
-      "user": 1,
-      "content_type": 8,
-      "object_id": "4",
-      "object_repr": "Муль Роман Эдуардович",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u043e\\u043c\\u0430\\u0448\\u043d\\u0438\\u0439 \\u0430\\u0434\\u0440\\u0435\\u0441\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 29,
-    "fields": {
-      "action_time": "2021-09-26T12:50:02.081Z",
-      "user": 1,
-      "content_type": 8,
-      "object_id": "3",
-      "object_repr": "Мезенина Арина Олеговна",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u043e\\u043c\\u0430\\u0448\\u043d\\u0438\\u0439 \\u0430\\u0434\\u0440\\u0435\\u0441\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 30,
-    "fields": {
-      "action_time": "2021-09-26T12:50:05.071Z",
-      "user": 1,
-      "content_type": 8,
-      "object_id": "2",
-      "object_repr": "Плотников Андрей Дмитриевич",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u043e\\u043c\\u0430\\u0448\\u043d\\u0438\\u0439 \\u0430\\u0434\\u0440\\u0435\\u0441\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 31,
-    "fields": {
-      "action_time": "2021-09-26T12:50:08.326Z",
-      "user": 1,
-      "content_type": 8,
-      "object_id": "1",
-      "object_repr": "Флесаков Никита Владимирович",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u043e\\u043c\\u0430\\u0448\\u043d\\u0438\\u0439 \\u0430\\u0434\\u0440\\u0435\\u0441\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 32,
-    "fields": {
-      "action_time": "2021-09-26T12:51:36.509Z",
-      "user": 1,
-      "content_type": 8,
-      "object_id": "14",
-      "object_repr": "Майорова Дарья Владимировна",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0440\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u044f\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 33,
-    "fields": {
-      "action_time": "2021-09-27T16:14:44.096Z",
-      "user": 1,
-      "content_type": 8,
-      "object_id": "33",
-      "object_repr": "Патенко Сергей Сергеевич",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 34,
-    "fields": {
-      "action_time": "2021-09-27T16:15:19.584Z",
-      "user": 1,
-      "content_type": 14,
-      "object_id": "37",
-      "object_repr": "AcademicPerformance object (37)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 35,
-    "fields": {
-      "action_time": "2021-11-15T15:13:24.064Z",
-      "user": 1,
-      "content_type": 8,
-      "object_id": "34",
-      "object_repr": "Тестов Тест Тестович",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 36,
-    "fields": {
-      "action_time": "2021-11-15T20:00:01.890Z",
-      "user": 1,
-      "content_type": 7,
-      "object_id": "1",
-      "object_repr": "Никулина Татьяна Владимировна",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Student\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 37,
-    "fields": {
-      "action_time": "2021-11-15T20:00:48.658Z",
-      "user": 1,
-      "content_type": 7,
-      "object_id": "1",
-      "object_repr": "Никулина Татьяна Владимировна",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Student\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 38,
-    "fields": {
-      "action_time": "2021-11-15T20:01:10.751Z",
-      "user": 1,
-      "content_type": 7,
-      "object_id": "1",
-      "object_repr": "Никулина Татьяна Владимировна",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Student\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 39,
-    "fields": {
-      "action_time": "2021-11-15T20:03:56.790Z",
-      "user": 1,
-      "content_type": 7,
-      "object_id": "1",
-      "object_repr": "Никулина Татьяна Владимировна",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Student\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 40,
-    "fields": {
-      "action_time": "2021-11-21T13:23:31.080Z",
-      "user": 1,
-      "content_type": 17,
-      "object_id": "1",
-      "object_repr": "ClassPeriod object (1)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 41,
-    "fields": {
-      "action_time": "2021-11-21T13:23:49.909Z",
-      "user": 1,
-      "content_type": 17,
-      "object_id": "2",
-      "object_repr": "ClassPeriod object (2)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 1,
-    "fields": {
-      "name": "Can add log entry",
-      "content_type": 1,
-      "codename": "add_logentry"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 2,
-    "fields": {
-      "name": "Can change log entry",
-      "content_type": 1,
-      "codename": "change_logentry"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 3,
-    "fields": {
-      "name": "Can delete log entry",
-      "content_type": 1,
-      "codename": "delete_logentry"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 4,
-    "fields": {
-      "name": "Can view log entry",
-      "content_type": 1,
-      "codename": "view_logentry"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 5,
-    "fields": {
-      "name": "Can add permission",
-      "content_type": 2,
-      "codename": "add_permission"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 6,
-    "fields": {
-      "name": "Can change permission",
-      "content_type": 2,
-      "codename": "change_permission"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 7,
-    "fields": {
-      "name": "Can delete permission",
-      "content_type": 2,
-      "codename": "delete_permission"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 8,
-    "fields": {
-      "name": "Can view permission",
-      "content_type": 2,
-      "codename": "view_permission"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 9,
-    "fields": {
-      "name": "Can add group",
-      "content_type": 3,
-      "codename": "add_group"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 10,
-    "fields": {
-      "name": "Can change group",
-      "content_type": 3,
-      "codename": "change_group"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 11,
-    "fields": {
-      "name": "Can delete group",
-      "content_type": 3,
-      "codename": "delete_group"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 12,
-    "fields": {
-      "name": "Can view group",
-      "content_type": 3,
-      "codename": "view_group"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 13,
-    "fields": {
-      "name": "Can add user",
-      "content_type": 4,
-      "codename": "add_user"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 14,
-    "fields": {
-      "name": "Can change user",
-      "content_type": 4,
-      "codename": "change_user"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 15,
-    "fields": {
-      "name": "Can delete user",
-      "content_type": 4,
-      "codename": "delete_user"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 16,
-    "fields": {
-      "name": "Can view user",
-      "content_type": 4,
-      "codename": "view_user"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 17,
-    "fields": {
-      "name": "Can add content type",
-      "content_type": 5,
-      "codename": "add_contenttype"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 18,
-    "fields": {
-      "name": "Can change content type",
-      "content_type": 5,
-      "codename": "change_contenttype"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 19,
-    "fields": {
-      "name": "Can delete content type",
-      "content_type": 5,
-      "codename": "delete_contenttype"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 20,
-    "fields": {
-      "name": "Can view content type",
-      "content_type": 5,
-      "codename": "view_contenttype"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 21,
-    "fields": {
-      "name": "Can add session",
-      "content_type": 6,
-      "codename": "add_session"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 22,
-    "fields": {
-      "name": "Can change session",
-      "content_type": 6,
-      "codename": "change_session"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 23,
-    "fields": {
-      "name": "Can delete session",
-      "content_type": 6,
-      "codename": "delete_session"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 24,
-    "fields": {
-      "name": "Can view session",
-      "content_type": 6,
-      "codename": "view_session"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 25,
-    "fields": {
-      "name": "Can add parent",
-      "content_type": 7,
-      "codename": "add_parent"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 26,
-    "fields": {
-      "name": "Can change parent",
-      "content_type": 7,
-      "codename": "change_parent"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 27,
-    "fields": {
-      "name": "Can delete parent",
-      "content_type": 7,
-      "codename": "delete_parent"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 28,
-    "fields": {
-      "name": "Can view parent",
-      "content_type": 7,
-      "codename": "view_parent"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 29,
-    "fields": {
-      "name": "Can add student",
-      "content_type": 8,
-      "codename": "add_student"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 30,
-    "fields": {
-      "name": "Can change student",
-      "content_type": 8,
-      "codename": "change_student"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 31,
-    "fields": {
-      "name": "Can delete student",
-      "content_type": 8,
-      "codename": "delete_student"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 32,
-    "fields": {
-      "name": "Can view student",
-      "content_type": 8,
-      "codename": "view_student"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 33,
-    "fields": {
-      "name": "Can add teacher",
-      "content_type": 9,
-      "codename": "add_teacher"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 34,
-    "fields": {
-      "name": "Can change teacher",
-      "content_type": 9,
-      "codename": "change_teacher"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 35,
-    "fields": {
-      "name": "Can delete teacher",
-      "content_type": 9,
-      "codename": "delete_teacher"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 36,
-    "fields": {
-      "name": "Can view teacher",
-      "content_type": 9,
-      "codename": "view_teacher"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 37,
-    "fields": {
-      "name": "Can add subject",
-      "content_type": 10,
-      "codename": "add_subject"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 38,
-    "fields": {
-      "name": "Can change subject",
-      "content_type": 10,
-      "codename": "change_subject"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 39,
-    "fields": {
-      "name": "Can delete subject",
-      "content_type": 10,
-      "codename": "delete_subject"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 40,
-    "fields": {
-      "name": "Can view subject",
-      "content_type": 10,
-      "codename": "view_subject"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 41,
-    "fields": {
-      "name": "Can add performance",
-      "content_type": 11,
-      "codename": "add_performance"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 42,
-    "fields": {
-      "name": "Can change performance",
-      "content_type": 11,
-      "codename": "change_performance"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 43,
-    "fields": {
-      "name": "Can delete performance",
-      "content_type": 11,
-      "codename": "delete_performance"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 44,
-    "fields": {
-      "name": "Can view performance",
-      "content_type": 11,
-      "codename": "view_performance"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 45,
-    "fields": {
-      "name": "Can add parents",
-      "content_type": 12,
-      "codename": "add_parents"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 46,
-    "fields": {
-      "name": "Can change parents",
-      "content_type": 12,
-      "codename": "change_parents"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 47,
-    "fields": {
-      "name": "Can delete parents",
-      "content_type": 12,
-      "codename": "delete_parents"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 48,
-    "fields": {
-      "name": "Can view parents",
-      "content_type": 12,
-      "codename": "view_parents"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 49,
-    "fields": {
-      "name": "Can add hobbies",
-      "content_type": 13,
-      "codename": "add_hobbies"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 50,
-    "fields": {
-      "name": "Can change hobbies",
-      "content_type": 13,
-      "codename": "change_hobbies"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 51,
-    "fields": {
-      "name": "Can delete hobbies",
-      "content_type": 13,
-      "codename": "delete_hobbies"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 52,
-    "fields": {
-      "name": "Can view hobbies",
-      "content_type": 13,
-      "codename": "view_hobbies"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 53,
-    "fields": {
-      "name": "Can add academic performance",
-      "content_type": 14,
-      "codename": "add_academicperformance"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 54,
-    "fields": {
-      "name": "Can change academic performance",
-      "content_type": 14,
-      "codename": "change_academicperformance"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 55,
-    "fields": {
-      "name": "Can delete academic performance",
-      "content_type": 14,
-      "codename": "delete_academicperformance"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 56,
-    "fields": {
-      "name": "Can view academic performance",
-      "content_type": 14,
-      "codename": "view_academicperformance"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 57,
-    "fields": {
-      "name": "Can add user profile",
-      "content_type": 15,
-      "codename": "add_userprofile"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 58,
-    "fields": {
-      "name": "Can change user profile",
-      "content_type": 15,
-      "codename": "change_userprofile"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 59,
-    "fields": {
-      "name": "Can delete user profile",
-      "content_type": 15,
-      "codename": "delete_userprofile"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 60,
-    "fields": {
-      "name": "Can view user profile",
-      "content_type": 15,
-      "codename": "view_userprofile"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 61,
-    "fields": {
-      "name": "Can add spent class period",
-      "content_type": 16,
-      "codename": "add_spentclassperiod"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 62,
-    "fields": {
-      "name": "Can change spent class period",
-      "content_type": 16,
-      "codename": "change_spentclassperiod"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 63,
-    "fields": {
-      "name": "Can delete spent class period",
-      "content_type": 16,
-      "codename": "delete_spentclassperiod"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 64,
-    "fields": {
-      "name": "Can view spent class period",
-      "content_type": 16,
-      "codename": "view_spentclassperiod"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 65,
-    "fields": {
-      "name": "Can add class period",
-      "content_type": 17,
-      "codename": "add_classperiod"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 66,
-    "fields": {
-      "name": "Can change class period",
-      "content_type": 17,
-      "codename": "change_classperiod"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 67,
-    "fields": {
-      "name": "Can delete class period",
-      "content_type": 17,
-      "codename": "delete_classperiod"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 68,
-    "fields": {
-      "name": "Can view class period",
-      "content_type": 17,
-      "codename": "view_classperiod"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 69,
-    "fields": {
-      "name": "Can add educational activities",
-      "content_type": 18,
-      "codename": "add_educationalactivities"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 70,
-    "fields": {
-      "name": "Can change educational activities",
-      "content_type": 18,
-      "codename": "change_educationalactivities"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 71,
-    "fields": {
-      "name": "Can delete educational activities",
-      "content_type": 18,
-      "codename": "delete_educationalactivities"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 72,
-    "fields": {
-      "name": "Can view educational activities",
-      "content_type": 18,
-      "codename": "view_educationalactivities"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 73,
-    "fields": {
-      "name": "Can add parent teacher meeting",
-      "content_type": 19,
-      "codename": "add_parentteachermeeting"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 74,
-    "fields": {
-      "name": "Can change parent teacher meeting",
-      "content_type": 19,
-      "codename": "change_parentteachermeeting"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 75,
-    "fields": {
-      "name": "Can delete parent teacher meeting",
-      "content_type": 19,
-      "codename": "delete_parentteachermeeting"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 76,
-    "fields": {
-      "name": "Can view parent teacher meeting",
-      "content_type": 19,
-      "codename": "view_parentteachermeeting"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 77,
-    "fields": {
-      "name": "Can add report",
-      "content_type": 20,
-      "codename": "add_report"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 78,
-    "fields": {
-      "name": "Can change report",
-      "content_type": 20,
-      "codename": "change_report"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 79,
-    "fields": {
-      "name": "Can delete report",
-      "content_type": 20,
-      "codename": "delete_report"
-    }
-  },
-  {
-    "model": "auth.permission",
-    "pk": 80,
-    "fields": {
-      "name": "Can view report",
-      "content_type": 20,
-      "codename": "view_report"
-    }
-  },
-  {
     "model": "auth.user",
     "pk": 1,
     "fields": {
@@ -1271,518 +18,326 @@
     }
   },
   {
-    "model": "contenttypes.contenttype",
-    "pk": 1,
-    "fields": {
-      "app_label": "admin",
-      "model": "logentry"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 2,
-    "fields": {
-      "app_label": "auth",
-      "model": "permission"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 3,
-    "fields": {
-      "app_label": "auth",
-      "model": "group"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 4,
-    "fields": {
-      "app_label": "auth",
-      "model": "user"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 5,
-    "fields": {
-      "app_label": "contenttypes",
-      "model": "contenttype"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 6,
-    "fields": {
-      "app_label": "sessions",
-      "model": "session"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 7,
-    "fields": {
-      "app_label": "education",
-      "model": "parent"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 8,
-    "fields": {
-      "app_label": "education",
-      "model": "student"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 9,
-    "fields": {
-      "app_label": "education",
-      "model": "teacher"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 10,
-    "fields": {
-      "app_label": "education",
-      "model": "subject"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 11,
-    "fields": {
-      "app_label": "education",
-      "model": "performance"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 12,
-    "fields": {
-      "app_label": "education",
-      "model": "parents"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 13,
-    "fields": {
-      "app_label": "education",
-      "model": "hobbies"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 14,
-    "fields": {
-      "app_label": "education",
-      "model": "academicperformance"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 15,
-    "fields": {
-      "app_label": "services",
-      "model": "userprofile"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 16,
-    "fields": {
-      "app_label": "homeroom",
-      "model": "spentclassperiod"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 17,
-    "fields": {
-      "app_label": "homeroom",
-      "model": "classperiod"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 18,
-    "fields": {
-      "app_label": "curator_work",
-      "model": "educationalactivities"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 19,
-    "fields": {
-      "app_label": "curator_work",
-      "model": "parentteachermeeting"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 20,
-    "fields": {
-      "app_label": "curator_work",
-      "model": "report"
-    }
-  },
-  {
-    "model": "sessions.session",
-    "pk": "1ivh3qjyzb1piu0br6z0ie9pyeglz0bt",
-    "fields": {
-      "session_data": ".eJxVjEEOwiAQRe_C2hBKmTK4dO8ZyMCAVA0kpV0Z765NutDtf-_9l_C0rcVvPS1-ZnEWgzj9boHiI9Ud8J3qrcnY6rrMQe6KPGiX18bpeTncv4NCvXxrN8RgdDaMGKYJlAoWmCxagjRCzsZAYkJUoBmjtiPlFLWDzOjIsRXvD-H3OCM:1monE9:a6Y7Ir4H2BzDXC4ywQOfZRkz6u8TFtkWdrBHO5DbFZ8",
-      "expire_date": "2021-12-05T13:49:53.416Z"
-    }
-  },
-  {
-    "model": "sessions.session",
-    "pk": "c2epa204qltbg5opbqrszq6gg9xtl1o4",
-    "fields": {
-      "session_data": ".eJxVjEEOwiAQRe_C2hBKmTK4dO8ZyMCAVA0kpV0Z765NutDtf-_9l_C0rcVvPS1-ZnEWgzj9boHiI9Ud8J3qrcnY6rrMQe6KPGiX18bpeTncv4NCvXxrN8RgdDaMGKYJlAoWmCxagjRCzsZAYkJUoBmjtiPlFLWDzOjIsRXvD-H3OCM:1mUEAU:VDfSo2VifWYn71MK0yu5fuSbH6AyRePfqmMX271JI0w",
-      "expire_date": "2021-10-09T20:21:06.916Z"
-    }
-  },
-  {
-    "model": "sessions.session",
-    "pk": "kdcaws1ilf885pvp805slfugzotx4su4",
-    "fields": {
-      "session_data": ".eJxVjEEOwiAQRe_C2hBKmTK4dO8ZyMCAVA0kpV0Z765NutDtf-_9l_C0rcVvPS1-ZnEWgzj9boHiI9Ud8J3qrcnY6rrMQe6KPGiX18bpeTncv4NCvXxrN8RgdDaMGKYJlAoWmCxagjRCzsZAYkJUoBmjtiPlFLWDzOjIsRXvD-H3OCM:1mZz94:sZK76d-3XuTDTp5jsCKMGSNnscCn0OMKAMIKw9T6j6I",
-      "expire_date": "2021-10-25T17:31:26.201Z"
-    }
-  },
-  {
-    "model": "sessions.session",
-    "pk": "u5bfdz2r318wip88e4u2yf0n0ja7ni10",
-    "fields": {
-      "session_data": ".eJxVjEEOwiAQRe_C2hBKmTK4dO8ZyMCAVA0kpV0Z765NutDtf-_9l_C0rcVvPS1-ZnEWgzj9boHiI9Ud8J3qrcnY6rrMQe6KPGiX18bpeTncv4NCvXxrN8RgdDaMGKYJlAoWmCxagjRCzsZAYkJUoBmjtiPlFLWDzOjIsRXvD-H3OCM:1mm0he:6R200e9rdIanjJkQhgtdDnHUJFLWAG0SRPrk-rBpqTM",
-      "expire_date": "2021-11-27T21:36:50.201Z"
-    }
-  },
-  {
     "model": "education.student",
     "pk": 1,
     "fields": {
-      "full_name": "Флесаков Никита Владимирович",
+      "full_name": "Р¤Р»РµСЃР°РєРѕРІ РќРёРєРёС‚Р° Р’Р»Р°РґРёРјРёСЂРѕРІРёС‡",
       "date_of_birth": "2002-12-20",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 2,
     "fields": {
-      "full_name": "Плотников Андрей Дмитриевич",
+      "full_name": "РџР»РѕС‚РЅРёРєРѕРІ РђРЅРґСЂРµР№ Р”РјРёС‚СЂРёРµРІРёС‡",
       "date_of_birth": "2002-12-27",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 3,
     "fields": {
-      "full_name": "Мезенина Арина Олеговна",
+      "full_name": "РњРµР·РµРЅРёРЅР° РђСЂРёРЅР° РћР»РµРіРѕРІРЅР°",
       "date_of_birth": "2002-02-16",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 4,
     "fields": {
-      "full_name": "Муль Роман Эдуардович",
+      "full_name": "РњСѓР»СЊ Р РѕРјР°РЅ Р­РґСѓР°СЂРґРѕРІРёС‡",
       "date_of_birth": "2001-09-04",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 5,
     "fields": {
-      "full_name": "Васильев Алексей Дмитриевич",
+      "full_name": "Р’Р°СЃРёР»СЊРµРІ РђР»РµРєСЃРµР№ Р”РјРёС‚СЂРёРµРІРёС‡",
       "date_of_birth": "2003-07-11",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 6,
     "fields": {
-      "full_name": "Глоба Лев Евгеньевич",
+      "full_name": "Р“Р»РѕР±Р° Р›РµРІ Р•РІРіРµРЅСЊРµРІРёС‡",
       "date_of_birth": "2002-11-02",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 7,
     "fields": {
-      "full_name": "Горшков Андрей Андреевич",
+      "full_name": "Р“РѕСЂС€РєРѕРІ РђРЅРґСЂРµР№ РђРЅРґСЂРµРµРІРёС‡",
       "date_of_birth": "2003-08-10",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 8,
     "fields": {
-      "full_name": "Дектерев Эдуард Сергеевич",
+      "full_name": "Р”РµРєС‚РµСЂРµРІ Р­РґСѓР°СЂРґ РЎРµСЂРіРµРµРІРёС‡",
       "date_of_birth": "2003-07-12",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 9,
     "fields": {
-      "full_name": "Дюканов Павел Игоревич",
+      "full_name": "Р”СЋРєР°РЅРѕРІ РџР°РІРµР» РРіРѕСЂРµРІРёС‡",
       "date_of_birth": "2002-02-19",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 10,
     "fields": {
-      "full_name": "Женишев Ислам Курсантбекович",
+      "full_name": "Р–РµРЅРёС€РµРІ РСЃР»Р°Рј РљСѓСЂСЃР°РЅС‚Р±РµРєРѕРІРёС‡",
       "date_of_birth": "2001-07-20",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 11,
     "fields": {
-      "full_name": "Земеров Никита Александрович",
+      "full_name": "Р—РµРјРµСЂРѕРІ РќРёРєРёС‚Р° РђР»РµРєСЃР°РЅРґСЂРѕРІРёС‡",
       "date_of_birth": "2003-09-19",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 12,
     "fields": {
-      "full_name": "Лапин Владислав Юрьевич",
+      "full_name": "Р›Р°РїРёРЅ Р’Р»Р°РґРёСЃР»Р°РІ Р®СЂСЊРµРІРёС‡",
       "date_of_birth": "2003-06-02",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 13,
     "fields": {
-      "full_name": "Левин Максим Сергеевич",
+      "full_name": "Р›РµРІРёРЅ РњР°РєСЃРёРј РЎРµСЂРіРµРµРІРёС‡",
       "date_of_birth": "2003-10-25",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 14,
     "fields": {
-      "full_name": "Майорова Дарья Владимировна",
+      "full_name": "РњР°Р№РѕСЂРѕРІР° Р”Р°СЂСЊСЏ Р’Р»Р°РґРёРјРёСЂРѕРІРЅР°",
       "date_of_birth": "2001-10-05",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 15,
     "fields": {
-      "full_name": "Прохоренко Никита Сергеевич",
+      "full_name": "РџСЂРѕС…РѕСЂРµРЅРєРѕ РќРёРєРёС‚Р° РЎРµСЂРіРµРµРІРёС‡",
       "date_of_birth": "2001-03-08",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 16,
     "fields": {
-      "full_name": "Риль Вячеслав Сергеевич",
+      "full_name": "Р РёР»СЊ Р’СЏС‡РµСЃР»Р°РІ РЎРµСЂРіРµРµРІРёС‡",
       "date_of_birth": "2003-08-26",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 17,
     "fields": {
-      "full_name": "Сафронов Андрей Станиславович",
+      "full_name": "РЎР°С„СЂРѕРЅРѕРІ РђРЅРґСЂРµР№ РЎС‚Р°РЅРёСЃР»Р°РІРѕРІРёС‡",
       "date_of_birth": "2003-03-12",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 18,
     "fields": {
-      "full_name": "Светной Артем Андреевич",
+      "full_name": "РЎРІРµС‚РЅРѕР№ РђСЂС‚РµРј РђРЅРґСЂРµРµРІРёС‡",
       "date_of_birth": "2001-07-03",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 19,
     "fields": {
-      "full_name": "Семенова Елена Дмитриевна",
+      "full_name": "РЎРµРјРµРЅРѕРІР° Р•Р»РµРЅР° Р”РјРёС‚СЂРёРµРІРЅР°",
       "date_of_birth": "2003-06-16",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 20,
     "fields": {
-      "full_name": "Стамбеков Берадор Замирбекович",
+      "full_name": "РЎС‚Р°РјР±РµРєРѕРІ Р‘РµСЂР°РґРѕСЂ Р—Р°РјРёСЂР±РµРєРѕРІРёС‡",
       "date_of_birth": "2003-07-12",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 21,
     "fields": {
-      "full_name": "Стрыгин Илья Евгеньевич",
+      "full_name": "РЎС‚СЂС‹РіРёРЅ РР»СЊСЏ Р•РІРіРµРЅСЊРµРІРёС‡",
       "date_of_birth": "2003-07-03",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 22,
     "fields": {
-      "full_name": "Таалайбек Аймээрим",
+      "full_name": "РўР°Р°Р»Р°Р№Р±РµРє РђР№РјСЌСЌСЂРёРј",
       "date_of_birth": "2001-02-28",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 23,
     "fields": {
-      "full_name": "Фалалеев Александр Игоревич",
+      "full_name": "Р¤Р°Р»Р°Р»РµРµРІ РђР»РµРєСЃР°РЅРґСЂ РРіРѕСЂРµРІРёС‡",
       "date_of_birth": "2002-02-05",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 24,
     "fields": {
-      "full_name": "Хинцинский Даниил Дмитриевич",
+      "full_name": "РҐРёРЅС†РёРЅСЃРєРёР№ Р”Р°РЅРёРёР» Р”РјРёС‚СЂРёРµРІРёС‡",
       "date_of_birth": "2003-02-26",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 25,
     "fields": {
-      "full_name": "Винокуров Евгений Алексеевич",
+      "full_name": "Р’РёРЅРѕРєСѓСЂРѕРІ Р•РІРіРµРЅРёР№ РђР»РµРєСЃРµРµРІРёС‡",
       "date_of_birth": "2003-02-06",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 26,
     "fields": {
-      "full_name": "Кузеванов Сергей Игоревич",
+      "full_name": "РљСѓР·РµРІР°РЅРѕРІ РЎРµСЂРіРµР№ РРіРѕСЂРµРІРёС‡",
       "date_of_birth": "2001-09-07",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 27,
     "fields": {
-      "full_name": "Мориков Данил Александрович",
+      "full_name": "РњРѕСЂРёРєРѕРІ Р”Р°РЅРёР» РђР»РµРєСЃР°РЅРґСЂРѕРІРёС‡",
       "date_of_birth": "2003-04-21",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 28,
     "fields": {
-      "full_name": "Орабинский Иван Александрович",
+      "full_name": "РћСЂР°Р±РёРЅСЃРєРёР№ РРІР°РЅ РђР»РµРєСЃР°РЅРґСЂРѕРІРёС‡",
       "date_of_birth": "2003-07-17",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 29,
     "fields": {
-      "full_name": "Резотдинов Владислав Романович",
+      "full_name": "Р РµР·РѕС‚РґРёРЅРѕРІ Р’Р»Р°РґРёСЃР»Р°РІ Р РѕРјР°РЅРѕРІРёС‡",
       "date_of_birth": "2001-09-21",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 30,
     "fields": {
-      "full_name": "Рябцев Сергей Викторович",
+      "full_name": "Р СЏР±С†РµРІ РЎРµСЂРіРµР№ Р’РёРєС‚РѕСЂРѕРІРёС‡",
       "date_of_birth": "2001-11-22",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 31,
     "fields": {
-      "full_name": "Трунов Никита",
+      "full_name": "РўСЂСѓРЅРѕРІ РќРёРєРёС‚Р°",
       "date_of_birth": "2001-07-09",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 32,
     "fields": {
-      "full_name": "Скоробогатый Данил",
+      "full_name": "РЎРєРѕСЂРѕР±РѕРіР°С‚С‹Р№ Р”Р°РЅРёР»",
       "date_of_birth": "2001-03-09",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 33,
     "fields": {
-      "full_name": "Патенко Сергей Сергеевич",
+      "full_name": "РџР°С‚РµРЅРєРѕ РЎРµСЂРіРµР№ РЎРµСЂРіРµРµРІРёС‡",
       "date_of_birth": "2021-02-15",
-      "home_address": "Калининград"
+      "home_address": "РљР°Р»РёРЅРёРЅРіСЂР°Рґ"
     }
   },
   {
     "model": "education.student",
     "pk": 36,
     "fields": {
-      "full_name": "Иванов Иван Иванович",
+      "full_name": "РРІР°РЅРѕРІ РРІР°РЅ РРІР°РЅРѕРІРёС‡",
       "date_of_birth": "2002-12-20",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.student",
     "pk": 38,
     "fields": {
-      "full_name": "Тестов Тест Тестович",
+      "full_name": "РўРµСЃС‚РѕРІ РўРµСЃС‚ РўРµСЃС‚РѕРІРёС‡",
       "date_of_birth": "2002-12-20",
-      "home_address": "Екатеринбург"
+      "home_address": "Р•РєР°С‚РµСЂРёРЅР±СѓСЂРі"
     }
   },
   {
     "model": "education.parent",
     "pk": 1,
     "fields": {
-      "full_name": "Никулина Татьяна Владимировна",
-      "place_of_work": "Высоцкий",
+      "full_name": "РќРёРєСѓР»РёРЅР° РўР°С‚СЊСЏРЅР° Р’Р»Р°РґРёРјРёСЂРѕРІРЅР°",
+      "place_of_work": "Р’С‹СЃРѕС†РєРёР№",
       "phone_number": "89222184369",
       "student": [
         1,
@@ -1796,7 +351,7 @@
     "pk": 1,
     "fields": {
       "student": 1,
-      "hobby": "Курсовое проектирование"
+      "hobby": "РљСѓСЂСЃРѕРІРѕРµ РїСЂРѕРµРєС‚РёСЂРѕРІР°РЅРёРµ"
     }
   },
   {
@@ -1804,7 +359,7 @@
     "pk": 2,
     "fields": {
       "student": 2,
-      "hobby": "Программирование "
+      "hobby": "РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ "
     }
   },
   {
@@ -1812,38 +367,38 @@
     "pk": 3,
     "fields": {
       "student": 3,
-      "hobby": "WEB-Дизайн"
+      "hobby": "WEB-Р”РёР·Р°Р№РЅ"
     }
   },
   {
     "model": "education.teacher",
     "pk": 1,
     "fields": {
-      "full_name": "Ярочкина Екатерина Дмитриевна",
-      "department": "ОИТ"
+      "full_name": "РЇСЂРѕС‡РєРёРЅР° Р•РєР°С‚РµСЂРёРЅР° Р”РјРёС‚СЂРёРµРІРЅР°",
+      "department": "РћРРў"
     }
   },
   {
     "model": "education.teacher",
     "pk": 3,
     "fields": {
-      "full_name": "Соколова Елена Павловна",
-      "department": "ОИТ"
+      "full_name": "РЎРѕРєРѕР»РѕРІР° Р•Р»РµРЅР° РџР°РІР»РѕРІРЅР°",
+      "department": "РћРРў"
     }
   },
   {
     "model": "education.teacher",
     "pk": 9,
     "fields": {
-      "full_name": "Бойбородина Людмила Николаевна",
-      "department": "ОИТ"
+      "full_name": "Р‘РѕР№Р±РѕСЂРѕРґРёРЅР° Р›СЋРґРјРёР»Р° РќРёРєРѕР»Р°РµРІРЅР°",
+      "department": "РћРРў"
     }
   },
   {
     "model": "education.subject",
     "pk": 1,
     "fields": {
-      "name": "Системное программирование",
+      "name": "РЎРёСЃС‚РµРјРЅРѕРµ РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ",
       "teacher": 1
     }
   },
@@ -1851,7 +406,7 @@
     "model": "education.subject",
     "pk": 2,
     "fields": {
-      "name": "Базы данных",
+      "name": "Р‘Р°Р·С‹ РґР°РЅРЅС‹С…",
       "teacher": 3
     }
   },
@@ -1859,7 +414,7 @@
     "model": "education.subject",
     "pk": 4,
     "fields": {
-      "name": "Прикладное программирование",
+      "name": "РџСЂРёРєР»Р°РґРЅРѕРµ РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ",
       "teacher": 9
     }
   },
@@ -1942,7 +497,7 @@
       "student": 1,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "3"
     }
   },
@@ -1953,7 +508,7 @@
       "student": 2,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "5"
     }
   },
@@ -1964,8 +519,8 @@
       "student": 3,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Промежуточная",
-      "mark": "Н/А"
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -1975,7 +530,7 @@
       "student": 4,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "3"
     }
   },
@@ -1986,7 +541,7 @@
       "student": 6,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "5"
     }
   },
@@ -1997,7 +552,7 @@
       "student": 7,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "5"
     }
   },
@@ -2008,7 +563,7 @@
       "student": 8,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "2"
     }
   },
@@ -2019,7 +574,7 @@
       "student": 9,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "3"
     }
   },
@@ -2030,7 +585,7 @@
       "student": 10,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "3"
     }
   },
@@ -2041,7 +596,7 @@
       "student": 11,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "4"
     }
   },
@@ -2052,7 +607,7 @@
       "student": 12,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "5"
     }
   },
@@ -2063,7 +618,7 @@
       "student": 13,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "5"
     }
   },
@@ -2074,7 +629,7 @@
       "student": 14,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "5"
     }
   },
@@ -2085,7 +640,7 @@
       "student": 15,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "4"
     }
   },
@@ -2096,7 +651,7 @@
       "student": 16,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "4"
     }
   },
@@ -2107,7 +662,7 @@
       "student": 17,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "3"
     }
   },
@@ -2118,7 +673,7 @@
       "student": 18,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "4"
     }
   },
@@ -2129,8 +684,8 @@
       "student": 19,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Итоговая",
-      "mark": "Н/А"
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2140,8 +695,8 @@
       "student": 20,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Промежуточная",
-      "mark": "Н/А"
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2151,8 +706,8 @@
       "student": 21,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Промежуточная",
-      "mark": "Н/А"
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2162,7 +717,7 @@
       "student": 22,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "3"
     }
   },
@@ -2173,7 +728,7 @@
       "student": 23,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "3"
     }
   },
@@ -2184,7 +739,7 @@
       "student": 24,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "4"
     }
   },
@@ -2195,7 +750,7 @@
       "student": 25,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "4"
     }
   },
@@ -2206,7 +761,7 @@
       "student": 26,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "3"
     }
   },
@@ -2217,7 +772,7 @@
       "student": 27,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "5"
     }
   },
@@ -2228,7 +783,7 @@
       "student": 28,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "5"
     }
   },
@@ -2239,7 +794,7 @@
       "student": 29,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "4"
     }
   },
@@ -2250,7 +805,7 @@
       "student": 30,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "5"
     }
   },
@@ -2261,7 +816,7 @@
       "student": 31,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "3"
     }
   },
@@ -2272,8 +827,8 @@
       "student": 32,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Итоговая",
-      "mark": "Н/А"
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2283,7 +838,7 @@
       "student": 33,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "5"
     }
   },
@@ -2294,7 +849,7 @@
       "student": 33,
       "subject": 1,
       "teacher": 1,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "5"
     }
   },
@@ -2305,7 +860,7 @@
       "student": 1,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "5"
     }
   },
@@ -2316,7 +871,7 @@
       "student": 1,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "2"
     }
   },
@@ -2327,7 +882,7 @@
       "student": 2,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "5"
     }
   },
@@ -2338,7 +893,7 @@
       "student": 3,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "3"
     }
   },
@@ -2349,7 +904,7 @@
       "student": 4,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "5"
     }
   },
@@ -2360,7 +915,7 @@
       "student": 5,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "3"
     }
   },
@@ -2371,7 +926,7 @@
       "student": 6,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "4"
     }
   },
@@ -2382,8 +937,8 @@
       "student": 7,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
-      "mark": "Н/А"
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2393,7 +948,7 @@
       "student": 8,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "2"
     }
   },
@@ -2404,7 +959,7 @@
       "student": 9,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "2"
     }
   },
@@ -2415,7 +970,7 @@
       "student": 10,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "4"
     }
   },
@@ -2426,7 +981,7 @@
       "student": 11,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "3"
     }
   },
@@ -2437,7 +992,7 @@
       "student": 12,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "3"
     }
   },
@@ -2448,7 +1003,7 @@
       "student": 13,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "3"
     }
   },
@@ -2459,7 +1014,7 @@
       "student": 14,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "3"
     }
   },
@@ -2470,7 +1025,7 @@
       "student": 15,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "5"
     }
   },
@@ -2481,7 +1036,7 @@
       "student": 16,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "2"
     }
   },
@@ -2492,7 +1047,7 @@
       "student": 17,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "5"
     }
   },
@@ -2503,8 +1058,8 @@
       "student": 18,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Промежуточная",
-      "mark": "Н/А"
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2514,7 +1069,7 @@
       "student": 19,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "3"
     }
   },
@@ -2525,8 +1080,8 @@
       "student": 20,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Промежуточная",
-      "mark": "Н/А"
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2536,7 +1091,7 @@
       "student": 21,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "4"
     }
   },
@@ -2547,7 +1102,7 @@
       "student": 22,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "3"
     }
   },
@@ -2558,7 +1113,7 @@
       "student": 23,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "2"
     }
   },
@@ -2569,7 +1124,7 @@
       "student": 24,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "2"
     }
   },
@@ -2580,7 +1135,7 @@
       "student": 25,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "5"
     }
   },
@@ -2591,7 +1146,7 @@
       "student": 26,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "4"
     }
   },
@@ -2602,8 +1157,8 @@
       "student": 27,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
-      "mark": "Н/А"
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2613,7 +1168,7 @@
       "student": 28,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "3"
     }
   },
@@ -2624,7 +1179,7 @@
       "student": 29,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "5"
     }
   },
@@ -2635,7 +1190,7 @@
       "student": 30,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "4"
     }
   },
@@ -2646,7 +1201,7 @@
       "student": 31,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "5"
     }
   },
@@ -2657,7 +1212,7 @@
       "student": 32,
       "subject": 2,
       "teacher": 3,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "2"
     }
   },
@@ -2668,8 +1223,8 @@
       "student": 1,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Промежуточная",
-      "mark": "Н/А"
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2679,8 +1234,8 @@
       "student": 2,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Промежуточная",
-      "mark": "Н/А"
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2690,7 +1245,7 @@
       "student": 3,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "4"
     }
   },
@@ -2701,7 +1256,7 @@
       "student": 4,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "5"
     }
   },
@@ -2712,7 +1267,7 @@
       "student": 5,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "4"
     }
   },
@@ -2723,7 +1278,7 @@
       "student": 6,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "2"
     }
   },
@@ -2734,8 +1289,8 @@
       "student": 7,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Промежуточная",
-      "mark": "Н/А"
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2745,8 +1300,8 @@
       "student": 8,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
-      "mark": "Н/А"
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2756,7 +1311,7 @@
       "student": 9,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "4"
     }
   },
@@ -2767,8 +1322,8 @@
       "student": 10,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
-      "mark": "Н/А"
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2778,8 +1333,8 @@
       "student": 11,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
-      "mark": "Н/А"
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2789,7 +1344,7 @@
       "student": 12,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "3"
     }
   },
@@ -2800,7 +1355,7 @@
       "student": 13,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "3"
     }
   },
@@ -2811,8 +1366,8 @@
       "student": 14,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
-      "mark": "Н/А"
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2822,7 +1377,7 @@
       "student": 15,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "5"
     }
   },
@@ -2833,7 +1388,7 @@
       "student": 16,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "3"
     }
   },
@@ -2844,8 +1399,8 @@
       "student": 17,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Промежуточная",
-      "mark": "Н/А"
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2855,8 +1410,8 @@
       "student": 18,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Промежуточная",
-      "mark": "Н/А"
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2866,7 +1421,7 @@
       "student": 19,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "2"
     }
   },
@@ -2877,7 +1432,7 @@
       "student": 20,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "2"
     }
   },
@@ -2888,7 +1443,7 @@
       "student": 21,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "4"
     }
   },
@@ -2899,7 +1454,7 @@
       "student": 22,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "2"
     }
   },
@@ -2910,8 +1465,8 @@
       "student": 23,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
-      "mark": "Н/А"
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2921,7 +1476,7 @@
       "student": 24,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "4"
     }
   },
@@ -2932,7 +1487,7 @@
       "student": 25,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "5"
     }
   },
@@ -2943,7 +1498,7 @@
       "student": 26,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "3"
     }
   },
@@ -2954,8 +1509,8 @@
       "student": 27,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
-      "mark": "Н/А"
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2965,7 +1520,7 @@
       "student": 28,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
       "mark": "5"
     }
   },
@@ -2976,7 +1531,7 @@
       "student": 29,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "4"
     }
   },
@@ -2987,8 +1542,8 @@
       "student": 30,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Итоговая",
-      "mark": "Н/А"
+      "type_of_perfomance": "РС‚РѕРіРѕРІР°СЏ",
+      "mark": "Рќ/Рђ"
     }
   },
   {
@@ -2998,7 +1553,7 @@
       "student": 31,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "5"
     }
   },
@@ -3009,7 +1564,7 @@
       "student": 32,
       "subject": 4,
       "teacher": 9,
-      "type_of_perfomance": "Промежуточная",
+      "type_of_perfomance": "РџСЂРѕРјРµР¶СѓС‚РѕС‡РЅР°СЏ",
       "mark": "4"
     }
   },
@@ -3025,16 +1580,16 @@
     "model": "homeroom.classperiod",
     "pk": 2,
     "fields": {
-      "topic": "Возвращение к очным занятиям!",
-      "month": "Ноябрь"
+      "topic": "Р’РѕР·РІСЂР°С‰РµРЅРёРµ Рє РѕС‡РЅС‹Рј Р·Р°РЅСЏС‚РёСЏРј!",
+      "month": "РќРѕСЏР±СЂСЊ"
     }
   },
   {
     "model": "homeroom.classperiod",
     "pk": 5,
     "fields": {
-      "topic": "Коронавирус в колледже",
-      "month": "Февраль"
+      "topic": "РљРѕСЂРѕРЅР°РІРёСЂСѓСЃ РІ РєРѕР»Р»РµРґР¶Рµ",
+      "month": "Р¤РµРІСЂР°Р»СЊ"
     }
   },
   {
@@ -3075,9 +1630,9 @@
     "model": "curator_work.educationalactivities",
     "pk": 5,
     "fields": {
-      "activity": "Воспитать в детях радость!",
+      "activity": "Р’РѕСЃРїРёС‚Р°С‚СЊ РІ РґРµС‚СЏС… СЂР°РґРѕСЃС‚СЊ!",
       "date": "2021-11-22",
-      "note": "Код полностью переписан!"
+      "note": "РљРѕРґ РїРѕР»РЅРѕСЃС‚СЊСЋ РїРµСЂРµРїРёСЃР°РЅ!"
     }
   }
 ]
