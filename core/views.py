@@ -13,9 +13,11 @@ def get_subject_name(subject_id):
 
 
 def final_performance(request):
-    objects = models.AcademicPerformance.objects.values('subject', 'mark').filter(type_of_perfomance="Итоговая").order_by('subject').annotate(
-        count=Count('mark')
-    )
+    objects = models.AcademicPerformance.objects\
+        .values('subject', 'mark')\
+        .filter(type_of_perfomance="Итоговая")\
+        .order_by('subject')\
+        .annotate(count=Count('mark'))
 
     data = dict()
     subject_id = objects[0]['subject']
@@ -28,5 +30,4 @@ def final_performance(request):
             data[subject_name] = {"labels": [], "datasets": []}
         data[subject_name]['labels'].append(str(_object['mark']))
         data[subject_name]['datasets'].append(_object['count'])
-    print(data)
     return render(request, "dashboard.html", {"data": data})
