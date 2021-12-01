@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.contrib.auth import logout
+from django.shortcuts import render, redirect
 from education import models
 from django.db.models import Count
-from django.template import RequestContext
 
 
 # Create your views here.
@@ -44,3 +44,8 @@ def handler500(request, template_name="page500.html"):
     response = render(request, template_name)
     response.status_code = 500
     return response
+
+
+def logout_user(request):
+    logout(request)
+    return redirect("/")

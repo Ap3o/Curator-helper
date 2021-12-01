@@ -22,6 +22,9 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-e!t0)(#luvy=l$e632-)&bm3z8xi&5+udru9(@nr657hi2s4%c'
 
+# Редирект уже авторизованных пользователей
+LOGIN_REDIRECT_URL = '/'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -85,7 +88,7 @@ DATABASES = {
         'NAME': 'home_server',
         'USER': 'root',
         'PASSWORD': 'W4bggguPf9JNa2i%',
-        'HOST': '127.0.0.1',#os.getenv("MYSQL_HOST"),
+        'HOST': '127.0.0.1',  # os.getenv("MYSQL_HOST"),
         'PORT': '3306'
     }
 }
