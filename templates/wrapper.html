@@ -368,27 +368,6 @@
 <!-- Уведомления -->
 <script src="{% static 'plugins/toastr/toastr.min.js' %}"></script>
 
-<script>
-    $(document).on('click', '.btn-success.save', function () {
-        // создаем AJAX-вызов
-
-        $.ajax({
-            type: 'POST',
-            data: $('#post-form').serialize() + '&id=' + 'None' + "&type=" + 'save',
-            url: '',
-
-            // если успешно, то
-            success: function (response) {
-                toastr.success(response.text)
-            },
-            // если ошибка, то
-            error: function (response) {
-                toastr.error(response)
-            }
-        });
-        return false;
-    });
-</script>
 {% block scripts %}
 {% endblock %}
 

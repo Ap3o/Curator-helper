@@ -27,10 +27,33 @@
         <button type="button" name="submitHidden" class="btn btn-success save">Сохранить</button>
     </div>
 </form>
+{% block scripts %}
+    <script>
+        $(document).on('click', '.btn-success.save', function () {
+            // создаем AJAX-вызов
+
+            $.ajax({
+                type: 'POST',
+                data: $('#post-form').serialize() + '&id=' + '{{ id }}' + "&type=" + 'save',
+                url: '',
+
+                // если успешно, то
+                success: function (response) {
+                    toastr.success(response.text)
+                },
+                // если ошибка, то
+                error: function (response) {
+                    toastr.error(response)
+                }
+            });
+            return false;
+        });
+    </script>
+{% endblock %}
 {#<script>#}
 {#    $(document).on('click', '.btn-success.save', function () {#}
 {#        // создаем AJAX-вызов#}
-        {#console.log($('#post-form').serialize() + '&id=' + '{{ id }}' + "&type=" + 'save')#}
+{#console.log($('#post-form').serialize() + '&id=' + '{{ id }}' + "&type=" + 'save')#}
 {#        $.ajax({#}
 {#            type: 'POST',#}
 {#            data: $('#post-form').serialize() + '&id=' + '{{ id }}' + "&type=" + 'save',#}
