@@ -159,12 +159,27 @@
         <div class="sidebar">
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                <div class="image">
-                    <img src="{% static 'staticdist/img/AvatarPolzunova.png' %}" class="img-circle elevation-2" alt="User Image">
-                </div>
-                <div class="info">
-                    <a href="#" class="d-block">{{ request.user.first_name }} {{ request.user.last_name }}</a>
-                </div>
+                {% if user.is_authenticated %}
+                    <div class="image">
+                        <img src="{% static 'staticdist/img/AvatarPolzunova.png' %}" class="img-circle elevation-2"
+                             alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">{{ request.user.first_name }} {{ request.user.last_name }}</a>
+
+                    </div>
+                    <div class="info">
+                        <a href="{% url 'logout' %}"><i class="fa fa-sign-out-alt"></i></a>
+                    </div>
+                {% else %}
+                    <div class="image">
+                        <img src="{% static 'staticdist/img/AvatarPolzunova.png' %}" class="img-circle elevation-2"
+                             alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="{% url 'login' %}"><i class="fa fa-sign-in-alt"></i> Log in</a>
+                    </div>
+                {% endif %}
             </div>
 
             <!-- Sidebar Menu -->
@@ -199,12 +214,6 @@
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
-                            {#                            <li class="nav-item">#}
-                            {#                                <a href="pages/tables/simple.html" class="nav-link">#}
-                            {#                                    <i class="far fa-circle nav-icon"></i>#}
-                            {#                                    <p>Simple Tables</p>#}
-                            {#                                </a>#}
-                            {#                            </li>#}
                             <li class="nav-item">
                                 <a href="{% url 'students' %}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
