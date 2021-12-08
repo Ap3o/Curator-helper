@@ -6,7 +6,7 @@ from django.db.models import Count
 
 # Create your views here.
 def index(request):
-    return render(request, "wrapper.html")
+    return render(request, "main.html")
 
 
 def get_subject_name(subject_id):
